@@ -1,0 +1,142 @@
+body{
+    background-color: #1B1C1D;
+}
+
+#canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+    position: relative;
+}
+
+#content {
+    width: 100px;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 1;
+}
+
+.anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(1.3);
+    transform-origin: 50% 45%;
+}
+  
+.animation-wrapper {
+    width: 50%;
+    padding-bottom: 50%;
+}
+
+.sphere-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 580px;
+    height: 580px;
+    margin: -290px 0 0 -290px;
+}
+
+.sphere path {
+    fill: url(#sphereGradient);
+    stroke-width: 1px;
+    stroke: rgba(80,80,80,.35);
+    backface-visibility: hidden;
+}
+
+.card-title{
+    color: white;
+}
+.card-text{
+    color: white;
+}
+
+#logo {
+    float: left;
+    width: 100%;
+    margin-right: 0px;
+    -webkit-filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88)); /* Chrome, Safari, Opera */
+    filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88));
+}
+
+@media (min-width: 500px) {
+    .sphere path {
+        stroke-width: .4px;
+    }
+}
+
+.card-img-top{
+    height: auto;
+    width: 100%;
+}
+
+.card{
+    margin: 15px;
+    margin-right: 20%;
+    width: 18rem;
+    background-color: rgba(0,0,0,0);
+}
+
+#overlay-wordcloud {
+    position: fixed;
+    display: none;
+    padding: 6%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2;
+}
+  
+#overlay-pixla {
+    position: fixed;
+    display: none;
+    padding: 6%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2;
+}
+
+.ui.navbar {
+    margin-top: 0px !important;
+    width: 100%;
+}
+
+.padding-reset{
+	padding: 0px !important;
+}
+
+.ui.message{
+	padding: 40px !important;
+}
+
+@media (max-width: 767px) {
+  	.ui.inverted.navbar{
+	}
+}
+
+.ui.vertical.menu{
+	margin-top: -15px !important;
+	width: 100%;
+	display: none;
+}
