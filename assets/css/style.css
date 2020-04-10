@@ -4,6 +4,7 @@ html {
 
 body{
     background-color: #1B1C1D;
+    position: relative;
 }
 
 /* ANIM STUFF */
@@ -15,13 +16,15 @@ body{
     z-index: -5;
     position: absolute;
     top: 0px;
+    bottom: 0px;
     height: 120vh;
 }
 
 #main {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
+    overflow-y: scroll;
 }
 
 .container {
