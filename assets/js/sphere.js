@@ -71,7 +71,7 @@ var sphereAnimation = (function() {
           var percent = (1 - Math.sin((i * .35) + (.0019 * ins.currentTime))) / 2;
           animation.seek(animation.duration * percent);
           if(!logged){ //Log animation object once
-            console.log(animation);
+            console.log(animations);
             logged = true;
           }
         });

@@ -20,53 +20,31 @@ body{
     height: 120vh;
 }
 
-#main {
+#pop {
     width: 100%;
     height: 100%;
     position: fixed;
     overflow-y: scroll;
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    z-index: 1;
+    top: 0px;
 }
 
 .anim {
-    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: scale(1.3);
-    transform-origin: 50% 45%;
-}
-  
-.animation-wrapper {
-    width: 50%;
-    padding-bottom: 50%;
+    height: 100%;
+    z-index: 1;
 }
 
-.sphere-animation {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 580px;
-    height: 580px;
-    margin: -290px 0 0 -290px;
+.sphere-animation{
+    transform-origin: 0% 0%;
+    transform: scale(4.1)!important
 }
 
 .sphere path {
     fill: url(#sphereGradient);
-    stroke-width: 1px;
+    stroke-width: .7px;
     stroke: rgba(80,80,80,.35);
     backface-visibility: hidden;
 }
@@ -76,40 +54,9 @@ body{
         stroke-width: .4px;
     }
 }
-
 /* END ANIM STUFF */
 
-.card-title{
-    color: white;
-}
-.card-text{
-    color: white;
-}
-
-#wordcloud {
-    float: left;
-    width: 100%;
-    margin-right: 0px;
-    -webkit-filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88)); /* Chrome, Safari, Opera */
-    filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88));
-}
-
-.ui.inverted.cards{
-    background-color: rgba(0,0,0,0);
-}
-
-.card-img-top{
-    height: auto;
-    width: 100%;
-}
-
-.card{
-    margin: 15px;
-    margin-right: 20%;
-    width: 18rem;
-    background-color: rgba(0,0,0,0);
-}
-
+/* NAVBAR STUFF */
 .ui.navbar {
     margin-top: 0px !important;
     width: 100%;
@@ -126,9 +73,11 @@ body{
 #logo-satchmo{
     margin-top: 13px;
     margin-bottom: 10px;
-    margin-left: 22px;
     height: 30px;
     width: auto;
+    transition-timing-function: ease-in;
+    /* Quick on the way out */
+    transition: 0.2s;
 }
 
 @media (max-width: 767px) {
@@ -137,6 +86,17 @@ body{
           margin-bottom: 0%;
           height: 60px;
 	}
+}
+
+@media (max-width: 360px) {
+    #logo-satchmo{
+        height: 25px;
+        width: auto;
+    }
+    #nav-collapsed{
+        max-width: 47%;
+    }
+
 }
 
 .ui.vertical.menu{
@@ -148,3 +108,29 @@ body{
     top: 89px;
     right: 0px;
 } 
+
+/* END NAVBAR STUFF */
+
+
+.pixla-text-actual{
+    -webkit-filter: drop-shadow(.25em .25em 0px #333333); /* Chrome, Safari, Opera */
+    filter: drop-shadow(.25em .25em 0px #333333);
+}
+
+.wordcloud-img-actual{
+    -webkit-filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88)); /* Chrome, Safari, Opera */
+    filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88));
+}
+
+.footer{
+    position: absolute;
+    width: 100%;
+    z-index: 55;
+    bottom: 0;
+    height: 50px;
+    padding: 0%;
+}
+
+#foot{
+    padding: 0%;
+}
