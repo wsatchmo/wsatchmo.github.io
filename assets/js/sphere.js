@@ -1,3 +1,31 @@
+
+var strokeOne = 'rgba(75,165,205,1)';
+var strokeTwo = 'rgba(80,80,80,.35)';
+
+//When a dev element is clicked
+$('.dev').click(function(){
+  let stroke = "dev";
+  sphereEvent(stroke);
+});
+//When a des element is clicked
+$('.des').click(function(){
+  let stroke = "des";
+  sphereEvent(stroke);
+});
+//Default; for both des and dev
+$('.both').click(function(){
+  let stroke = "both";
+  sphereEvent(stroke);
+});
+
+function sphereEvent(stroke){
+  console.log("sphere event");
+  if (stroke === "dev"){
+    strokeOne = 'rgba(255,45,65,1)';
+  }
+}
+
+//Fit to parent elem, resizes with window
 function fitElementToParent(el, padding) {
     var timeout = null;
     function resize() {
@@ -14,22 +42,23 @@ function fitElementToParent(el, padding) {
     window.addEventListener('resize', resize);
 }
   
+var logged = false;
 var sphereAnimation = (function() {
   
     var sphereEl = document.querySelector('.sphere-animation');
     var spherePathEls = sphereEl.querySelectorAll('.sphere path');
     var pathLength = spherePathEls.length;
     var hasStarted = false;
-    var aimations = [];
+    var animations = [];
   
     fitElementToParent(sphereEl);
   
     var breathAnimation = anime({
       begin: function() {
         for (var i = 0; i < pathLength; i++) {
-          aimations.push(anime({
+          animations.push(anime({ //ANIMATION
             targets: spherePathEls[i],
-            stroke: {value: ['rgba(75,165,205,1)', 'rgba(80,80,80,.35)'], duration: 1000},
+            stroke: {value: [strokeOne, strokeTwo], duration: 1000},
             translateX: [2, -4],
             translateY: [2, -4],
             easing: 'easeOutQuad',
@@ -38,9 +67,13 @@ var sphereAnimation = (function() {
         }
       },
       update: function(ins) {
-        aimations.forEach(function(animation, i) {
-          var percent = (1 - Math.sin((i * .35) + (.0022 * ins.currentTime))) / 2;
+        animations.forEach(function(animation, i) { //SPHERE WOBBLE
+          var percent = (1 - Math.sin((i * .35) + (.0019 * ins.currentTime))) / 2;
           animation.seek(animation.duration * percent);
+          if(!logged){ //Log animation object once
+            console.log(animation);
+            logged = true;
+          }
         });
       },
       duration: Infinity,
@@ -50,7 +83,7 @@ var sphereAnimation = (function() {
     var introAnimation = anime.timeline({
       autoplay: false
     })
-    .add({
+    .add({ //NEON LINES
       targets: spherePathEls,
       strokeDashoffset: {
         value: [anime.setDashoffset, 0],
@@ -58,11 +91,12 @@ var sphereAnimation = (function() {
         easing: 'easeInOutCirc',
         delay: anime.stagger(190, {direction: 'reverse'})
       },
-      duration: 2000,
+      duration: 5000,
       delay: anime.stagger(60, {direction: 'reverse'}),
       easing: 'linear'
     }, 0);
   
+    //SHADOW
     var shadowAnimation = anime({
         targets: '#sphereGradient',
         x1: '25%',

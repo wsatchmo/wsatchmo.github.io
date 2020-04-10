@@ -2,58 +2,72 @@ var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 var cH;
 var cW;
-var bgColor = "#000000";
+var bgColor = "#323232";
 var animations = [];
 var circles = [];
 
-var colorPicker = (function() {
-  var colors = ["#000000", "#333333", "#FFFFFF"];
-  var index = 0;
-  function next() {
-    index = index++ < colors.length-1 ? index : 0;
-    return colors[index];
-  }
-  function current() {
-    return colors[index]
-  }
-  return {
-    next: next,
-    current: current
-  }
-})();
+let des = "#FFFFFF";
+let dev = "#000000";
+let both = "#323232";
+var current = bgColor;
+
+// var colorPicker = (function() {
+//   var colors = ["#000000", "#323232", "#FFFFFF"];
+
+//   var index = 0;
+//   function next() {
+//     index = index++ < colors.length-1 ? index : 0;
+//     return colors[index];
+//   }
+//   function current() {
+//     return colors[index]
+//   }
+//   return {
+//     next: next,
+//     current: current
+//   }
+// })();
 
 function removeAnimation(animation) {
   var index = animations.indexOf(animation);
   if (index > -1) animations.splice(index, 1);
 }
 
-function calcPageFillRadius(x, y) {
-  var l = Math.max(x - 0, cW - x);
-  var h = Math.max(y - 0, cH - y);
-  return Math.sqrt(Math.pow(l, 2) + Math.pow(h, 2));
-}
+//When a dev element is clicked
+$('.dev').click(function(){
+  handleEvent(current, dev);
+});
+//When a des element is clicked
+$('.des').click(function(){
+  handleEvent(current, des);
+});
+//Default; for both des and dev
+$('.both').click(function(){
+  handleEvent(current, both);
+});
 
-function addClickListeners() {
-  document.addEventListener("touchstart", handleEvent);
-  document.addEventListener("mousedown", handleEvent);
-};
+//=======================MOST OF THE COLOR PICKING WORK IS DONE ABOVE HERE
+//--WHILE BELOW IS EVENT WORK============================================
 
-function handleEvent(e) {
-    if (e.touches) { 
-      e.preventDefault();
-      e = e.touches[0];
-    }
-    var currentColor = colorPicker.current();
-    var nextColor = colorPicker.next();
-    var targetR = calcPageFillRadius(e.pageX, e.pageY);
+//This is the actual event itself
+function handleEvent(col, chosen) {
+    event.preventDefault();
+    // if (e.touches) { 
+    //   e = e.touches[0];
+    //   console.log("e:", e);
+    //   console.log(e.touches[0]);
+    // }
+    var currentColor = col;
+    var nextColor = chosen;
+    var targetR = calcPageFillRadius(event.pageX, event.pageY);
     var rippleSize = Math.min(200, (cW * .4));
     var minCoverDuration = 750;
     
     var pageFill = new Circle({
-      x: e.pageX,
-      y: e.pageY,
+      x: event.pageX,
+      y: event.pageY,
       r: 0,
-      fill: nextColor
+      fill: nextColor //Color filled DURING anim [!]
     });
     var fillAnimation = anime({
       targets: pageFill,
@@ -61,19 +75,19 @@ function handleEvent(e) {
       duration:  Math.max(targetR / 2 , minCoverDuration ),
       easing: "easeOutQuart",
       complete: function(){
-        bgColor = pageFill.fill;
+        bgColor = pageFill.fill; //Color filled AFTER anim
         removeAnimation(fillAnimation);
       }
     });
     
     var ripple = new Circle({
-      x: e.pageX,
-      y: e.pageY,
+      x: event.pageX,
+      y: event.pageY,
       r: 0,
-      fill: currentColor,
+      fill: currentColor, //Radial boom color
       stroke: {
         width: 3,
-        color: currentColor
+        color: currentColor //Radial boom stroke color
       },
       opacity: 1
     });
@@ -89,9 +103,9 @@ function handleEvent(e) {
     var particles = [];
     for (var i=0; i<18; i++) {
       var particle = new Circle({
-        x: e.pageX,
-        y: e.pageY,
-        fill: currentColor,
+        x: event.pageX,
+        y: event.pageY,
+        fill: currentColor, //Particle color
         r: anime.random(24, 48)
       })
       particles.push(particle);
@@ -110,6 +124,19 @@ function handleEvent(e) {
       complete: removeAnimation
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
+    current = chosen;
+}
+
+//Page fill for anim===============//
+function calcPageFillRadius(x, y) {
+  var l = Math.max(x - 0, cW - x);
+  var h = Math.max(y - 0, cH - y);
+  return Math.sqrt(Math.pow(l, 2) + Math.pow(h, 2));
+}
+
+//Circle Object to draw============//
+var Circle = function(opts) {
+  extend(this, opts);
 }
 
 function extend(a, b){
@@ -119,10 +146,6 @@ function extend(a, b){
     }
   }
   return a;
-}
-
-var Circle = function(opts) {
-  extend(this, opts);
 }
 
 Circle.prototype.draw = function() {
@@ -135,13 +158,14 @@ Circle.prototype.draw = function() {
     ctx.stroke();
   }
   if (this.fill) {
-    ctx.fillStyle = this.fill;
+    ctx.fillStyle = this.fill; //Actual fill color [!]
     ctx.fill();
   }
   ctx.closePath();
   ctx.globalAlpha = 1;
 }
 
+//Actual animation=================//
 var animate = anime({
   duration: Infinity,
   update: function() {
@@ -155,7 +179,7 @@ var animate = anime({
   }
 });
 
-//CANVAS RESIZE TO PAGE===============//
+//Canvas resize to page==============//
 var resizeCanvas = function() {
   cW = window.innerWidth;
   cH = window.innerHeight;
@@ -172,10 +196,4 @@ var resizeCanvas = function() {
     window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000; 
   }
   window.addEventListener("resize", resizeCanvas);
-  addClickListeners();
-  if (!!window.location.pathname.match(/fullcpgrid/)) {
-    startFauxClicking();
-  }
-
 })();
-
