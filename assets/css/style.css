@@ -7,6 +7,17 @@ body{
     position: relative;
 }
 
+#dev-column{
+    transition-timing-function: ease-in;
+    /* Quick on the way out */
+    transition: 0.15s;
+}
+#des-column{
+    transition-timing-function: ease-in;
+    /* Quick on the way out */
+    transition: 0.15s;
+}
+
 /* ANIM STUFF */
 
 #canvas {
@@ -140,13 +151,13 @@ body{
     position: absolute;
 }
 .linksvg {
-    top: 105px;
+    top: 125px;
     position: relative;
     width: 320px;
 }
 .link-buttons-form{
     position: relative;
-    top: 105px;
+    top: 125px;
 }
 .linkpath {
     fill: none;
@@ -170,6 +181,147 @@ body{
     left: 42px;
 }
 /* END LINKS */
+
+/* GRID GALLERY */
+.illus-column{
+    position: relative;
+    top: 505px;
+}
+
+#illus{
+    color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab );
+	background-size: 400% 400%;
+	-webkit-animation: gradientBG 10s ease infinite;
+	        animation: gradientBG 10s ease infinite;
+    font-size: 20px;
+}
+	
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.gg-box{
+    position: relative;
+    top: 555px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 8px;
+}
+.gg-element img{
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    transition-timing-function: ease-in-out;
+    transition: 0.25s;
+}
+.gg-element img:hover{
+    transform: scale(1.5);
+}
+#gg-screen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top:0;
+    left: 0;
+    display: none;
+    background: rgba(255,255,255,0.85);
+    z-index: 9999;
+    text-align: center;
+}
+#gg-screen .gg-image{
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+#gg-screen .gg-image img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+.gg-bt{
+    width: 38px;
+    height: 38px;
+    background: rgba(255,255,255,0.6);
+    color: #222;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    font-size: 25px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    padding-left: 2px;
+}
+.gg-bt:hover{
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.gg-close{
+    position: fixed;
+    top:0.5em;
+}
+.gg-close,.gg-nxt{
+    right: 0.5em;
+}
+.gg-prev{
+    left: 0.5em;
+}
+.gg-prev,.gg-nxt{
+    position: fixed;
+    bottom: 50%;
+}
+@media (min-width:478px){
+    .gg-element:nth-child(3n+0){
+        grid-row-end: span 2;
+    }
+}
+@media(max-width:768px){
+    .gg-box{
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+        grid-auto-rows: 150px;
+        grid-gap: 6px;
+    }
+}
+@media(max-width: 450px){
+    .gg-box{
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        grid-auto-rows: 100px;
+        grid-gap: 4px;
+    }
+}
+/* END GRID GALLERY */
 
 /* FOOTER */
 .footer{

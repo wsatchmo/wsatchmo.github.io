@@ -1,7 +1,7 @@
 var linkEl = document.querySelector('.linkpath');
 var current = null;
 $('.github').hover(function(e) {
-  if (current) current.pause();
+//   if (current) current.pause();
   current = anime({
     targets: linkEl,
     strokeDashoffset: {
@@ -17,7 +17,7 @@ $('.github').hover(function(e) {
   });
 });
 $('.artstation').hover(function(e) {
-  if (current) current.pause();
+//   if (current) current.pause();
   current = anime({
     targets: linkEl,
     strokeDashoffset: {

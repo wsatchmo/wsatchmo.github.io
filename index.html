@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Will Satcher</title>
-    
+    <!-- CSS Styling -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Bulma Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
@@ -36,9 +37,9 @@
                   </div>
                 </a>
                 <div class="right menu">
-                    <a class="dev item">Development</a>
+                    <a class="dev dev-only item">Development</a>
                     <a class="both active item">Mixed</a>
-                    <a class="des item">Design</a>
+                    <a class="des des-only item">Design</a>
                 </div>
             </div>
         </div>
@@ -46,7 +47,7 @@
         <div class="mobile only narrow row">
             <div id="mini-nav" class="ui inverted navbar menu">
                 <a class="brand item">Will Satcher</a>
-                <a class="item">
+                <a id="logo-box" class="item">
                     <img id="logo-satchmo" class="ui middle aligned mini spaced image" src="./assets/images/satchmo.png" alt="Satchmo">
                 </a>
                 <div class="right menu open">
@@ -59,8 +60,8 @@
             </div>
             <!-- COLLAPSE NAVBAR -->
             <div id="nav-collapsed" class="ui vertical inverted navbar menu transition hidden" style="border-radius: 0%;">
-                <a class="item dev" style="border-radius: 0%;">Development</a>
-                <a class="item des">Design</a>
+                <a class="item dev dev-only" style="border-radius: 0%;">Development</a>
+                <a class="item des des-only">Design</a>
                 <a class="active item both">Mixed</a>
                 <div class="ui item">
                     <div class="text">Projects</div>
@@ -86,7 +87,7 @@
     <!-- PROJECTS -->
     <div class="container" style="z-index: 6; position: relative;">
         <!-- MAIN THREE PROJECTS -->
-        <div class="main-three">
+        <div id="dev-column" class="main-three">
             <!-- PIXLA -->
             <div class="column is-full project-column"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
@@ -111,12 +112,12 @@
                     </div>
                 </div>
                 <div class="buttons" style="margin-top: 1rem;">
-                    <button class="ui inverted button">Deployed Site</button>
-                    <button class="ui inverted button secondary" style="color: white;">Github Repo</button>
+                    <button class="ui inverted button project-button" onClick="parent.open('https://pixla.herokuapp.com')">Deployed Site</button>
+                    <button class="ui inverted button secondary project-button" onClick="parent.open('https://github.com/wsatchmo/Pixla')" style="color: white;">Github Repo</button>
                 </div>
             </div>
             <!-- WORDCLOUD -->
-            <div class="column is-full project-column"></div>
+            <div id="scrollto" class="column is-full project-column"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
                 <div class="wordcloud-img" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
                     <img class="wordcloud-img-actual column is-one-quarter" src="./assets/images/wordcloud.png" style="flex-grow: 1"></img>
@@ -138,8 +139,8 @@
                     </div>
                 </div>
                 <div class="buttons" style="margin-top: 1rem;">
-                    <button class="ui inverted button">Deployed Site</button>
-                    <button class="ui inverted button secondary" style="color: white;">Github Repo</button>
+                    <button class="ui inverted button project-button" onClick="parent.open('https://wsatchmo.github.io/Wordcloud')">Deployed Site</button>
+                    <button class="ui inverted button secondary project-button" onClick="parent.open('https://github.com/wsatchmo/Wordcloud')" style="color: white;">Github Repo</button>
                 </div>
             </div>
             <!-- BOOKTIONARY -->
@@ -160,18 +161,19 @@
                 
                         <div class="content">
                             Full-stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
-                            Uses Axios for React-dom-router requests. Deployed to Heroku; utilizes the Heroku mLab plugin.
+                            Uses Axios for React-dom-router requests. Deployed to Heroku with the Heroku mLab plugin.
                         </div>
                     </div>
                 </div>
                 <div class="buttons" style="margin-top: 1rem;">
-                    <button class="ui inverted button">Deployed Site</button>
-                    <button class="ui inverted button secondary" style="color: white;">Github Repo</button>
+                    <button class="ui inverted button project-button" onClick="parent.open('https://gentle-forest-73354.herokuapp.com/')">Deployed Site</button>
+                    <button class="ui inverted button secondary project-button" onClick="parent.open('https://github.com/wsatchmo/Booktionary')" style="color: white;">Github Repo</button>
                 </div>
             </div>
             <!-- END OF MAIN THREE PROJECTS -->
         </div>
         
+        <!-- BUTTONS -->
         <div class="link-buttons is-vcentered" style="display: flex; justify-content: center;">
             <div class="link-buttons-inner">
                 <svg class="linksvg" viewBox="0 0 320 300">
@@ -197,18 +199,96 @@
                     <path class="linkpath" d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
                 </svg>
                 <div class="form link-buttons-form">
-                    <button class="button is-light is-medium is-rounded github link-button">
+                    <button onClick="parent.open('https://github.com/wsatchmo')" class="button is-light is-medium is-rounded github link-button">
                         <span class="icon is-medium">
                             <img src="./assets/images/github_icon.png"></img>
                         </span>
                         <span>Github</span>
                     </button>
-                    <button class="button is-dark is-medium is-rounded artstation link-button">
+                    <button onClick="parent.open('https://artstation.com/wsatcher')" class="button is-dark is-medium is-rounded artstation link-button">
                         <span class="icon is-medium">
                             <img src="./assets/images/artstation_icon.png"></img>
                         </span>
                         <span>Artstation</span>
                     </button>
+                </div>
+            </div>
+        </div>
+        <!-- END OF BUTTONS -->
+
+        <!-- IMAGES -->
+        <div id="des-column">
+            <div class="column is-full illus-column">
+                <div class="card" style="background-color: rgba(0, 0, 0, 0);">
+                    <div class="card-content" >
+                        <div class="media">
+                            <div class="media-content">
+                                <header class="card-header" style="background-color: white;">
+                                    <p id="illus" class="card-header-title is-centered">Illutration & 3D Design</p>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gg-screen"></div>
+            <div class="gg-box">
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Battle_Top.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/EGG1.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/malik_zero.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Samuraiflat.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Self1.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Pilot_Matte_White_Front.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Pilot_real_front.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Pilot_Black_tinscarf.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Tyro_Pitkid.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/NunoftheScourge.41_HDR_1.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/NunoftheScourge.37.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/The_Last_Watcher_Flat_insta.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/VIVI_bkgrnd.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/VIVI_fin_angle.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/vivi_light_diff_ao_norm.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Shuten_Doji_Reborn.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Geishafin.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/malik_drifter.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Shogunflat.jpg">
                 </div>
             </div>
         </div>
@@ -258,32 +338,40 @@
    
 
       
-        <footer class="footer" id="foot">
-            <div class="container is-fluid">
-                <div class="content has-text-centered" style="margin-bottom: 5px;">
-                    <p style="margin-top: 10px;">
-                    <a href="https://github.com/wsatchmo" target="_blank" style="padding-bottom: 2%;">Will Satcher</a>
-                    </p>
-                </div>
+    <footer class="footer" id="foot">
+        <div class="container is-fluid">
+            <div class="content has-text-centered" style="margin-bottom: 5px;">
+                <p style="margin-top: 10px;">
+                <a href="https://github.com/wsatchmo" target="_blank" style="padding-bottom: 2%;">Will Satcher</a>
+                </p>
             </div>
-        </footer>
-    
+        </div>
+    </footer>
 
     <script type="text/javascript" src="./assets/js/animejs/lib/anime.min.js"></script>
     <script type="text/javascript" src="./assets/js/sphere.js"></script>
     <script type="text/javascript" src="./assets/js/pop.js"></script>
     <script type="text/javascript" src="./assets/js/buttons.js"></script>
-    <!-- NAV DROPDOWN -->
+    <script type="text/javascript" src="./assets/js/grid-gallery.js"></script>
+
     <script>
+    //NAV ANIM
         $("#collapse-button").on('click', function(e) {
             e.preventDefault();
             $(".navbar-burger").toggleClass("is-active");
             $('#nav-collapsed').transition('slide down');
         });
+        $("#logo-box").hover(() => {
+            $('#logo-satchmo').transition('jiggle');
+        });
+        $("#logo-box").on("click", () => {
+            $('#logo-satchmo').transition('tada');
+        });
 
         $('.ui.dropdown').dropdown();
     </script>
     <script>
+    //BUTTONS ANIMS
         $(".artstation").on("mouseenter", function(e) {
             $('.artstation').transition('pulse');
         });
@@ -296,6 +384,52 @@
         $(".github").on("click", function(e) {
             $('.github').transition('jiggle');
         });
+    </script>
+    <script type="text/javascript">
+    //DEV/DES ANIMS
+        $(".des-only").click(() => {
+            $(".des-only").addClass("active");
+            $(".dev-only").removeClass("active");
+            $(".both").removeClass("active");
+            if ($("#des-column").hasClass("hidden")){
+                $("#des-column").transition('scale');
+            }
+            if ($(".project-button").hasClass("inverted")){
+                $(".project-button").removeClass("inverted");
+            }
+            if (document.body.scrollTop === 0 && !$("#dev-column").hasClass("hidden")){
+                //We are at the top of navbar/screen; scroll to des-column if not in view
+                document.getElementById( 'scrollto' ).scrollIntoView();
+            }
+            $("#dev-column").transition('scale')
+            console.log("scrolltop", document.body.scrollTop);
+        });
+        $(".dev-only").click(() => {
+            $(".dev-only").addClass("active");
+            $(".des-only").removeClass("active");
+            $(".both").removeClass("active");
+            if ($("#dev-column").hasClass("hidden")){
+                $("#dev-column").transition('scale');
+            }
+            if (!$(".project-button").hasClass("inverted")){
+                $(".project-button").addClass("inverted");
+            }
+            $("#des-column").transition('scale');
+        })
+        $(".both").click(() => {
+            $(".both").addClass("active");
+            $(".dev-only").removeClass("active");
+            $(".des-only").removeClass("active");
+            if ($("#dev-column").hasClass("hidden")){
+                $("#dev-column").transition('scale');
+            }
+            if (!$(".project-button").hasClass("inverted")){
+                $(".project-button").addClass("inverted");
+            }
+            if ($("#des-column").hasClass("hidden")){
+                $("#des-column").transition('scale');
+            }
+        })
     </script>
 
 
