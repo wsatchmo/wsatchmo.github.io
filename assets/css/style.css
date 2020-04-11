@@ -32,6 +32,7 @@ body{
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -111,7 +112,7 @@ body{
 
 /* END NAVBAR STUFF */
 
-
+/* MAIN CONTENT */
 .pixla-text-actual{
     -webkit-filter: drop-shadow(.25em .25em 0px #333333); /* Chrome, Safari, Opera */
     filter: drop-shadow(.25em .25em 0px #333333);
@@ -122,8 +123,57 @@ body{
     filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88));
 }
 
-.footer{
+.booktionary-text-actual{
+    -webkit-filter: drop-shadow(.25em .25em 0px #333333); /* Chrome, Safari, Opera */
+    filter: drop-shadow(.25em .25em 0px r#333333);
+}
+
+.container{
+    transition-timing-function: ease-in;
+    /* Quick on the way out */
+    transition: 0.5s;
+}
+/* END MAIN CONTENT */
+
+/* LINKS */
+.link-buttons-inner{
     position: absolute;
+}
+.linksvg {
+    top: 105px;
+    position: relative;
+    width: 320px;
+}
+.link-buttons-form{
+    position: relative;
+    top: 105px;
+}
+.linkpath {
+    fill: none;
+    stroke: url(#linearGradient);;
+    stroke-width: 4;
+    stroke-dasharray: 240 1386;
+}
+.form {
+    margin: 40px;
+    position: absolute;
+}
+.github{
+    position: relative;
+    top: 22px;
+    left: 15px;
+    left: 59px;
+}
+.artstation{
+    position: relative;
+    top: 52px;
+    left: 42px;
+}
+/* END LINKS */
+
+/* FOOTER */
+.footer{
+    position: fixed;
     width: 100%;
     z-index: 55;
     bottom: 0;

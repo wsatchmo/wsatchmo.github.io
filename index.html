@@ -85,56 +85,134 @@
 
     <!-- PROJECTS -->
     <div class="container" style="z-index: 6; position: relative;">
-        <!-- PIXLA -->
-        <div class="column is-full"></div>
-        <div class="column is-three-quarters is-three-quarters-mobile" style="position: relative;">
-            <div class="pixla-img" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                <img class="pixla-img-actual column is-one-quarter" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
-                <img class="pixla-text-actual column is-three-quarters" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-content">
-                        <p class="title is-4">Pixla</p>
-                        <p class="subtitle is-6">Visual-centric social media</p>
+        <!-- MAIN THREE PROJECTS -->
+        <div class="main-three">
+            <!-- PIXLA -->
+            <div class="column is-full project-column"></div>
+            <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
+                <div class="pixla-img" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
+                    <img class="pixla-img-actual column is-one-quarter" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
+                    <img class="pixla-text-actual column is-three-quarters" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                            <p class="title is-4">Pixla</p>
+                            <p class="subtitle is-6">Visual-centric social media</p>
+                            </div>
                         </div>
-                    </div>
-            
-                    <div class="content">
-                        Utilizes Node.js with Express-Handlebars, for routing 
-                        and templating, Bulma.io CDN, Okta Authorization, and the Pexels image API. Pulls
-                        from an SQL Database; deployed to Heroku with the JawsDB plugin.
+                
+                        <div class="content">
+                            Utilizes Node.js with Express-Handlebars for routing 
+                            and templating, Bulma.io CDN, Okta Authorization, and the Pexels image API. 
+                            Linked to an SQL Database; deployed to Heroku with the JawsDB plugin.
+                        </div>
                     </div>
                 </div>
+                <div class="buttons" style="margin-top: 1rem;">
+                    <button class="ui inverted button">Deployed Site</button>
+                    <button class="ui inverted button secondary" style="color: white;">Github Repo</button>
+                </div>
             </div>
-        </div>
-
-        <!-- WORDCLOUD -->
-        <div class="column is-full"></div>
-        <div class="column is-three-quarters is-three-quarters-mobile" style="position: relative;">
-            <div class="wordcloud-img" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
-                <img class="wordcloud-img-actual column is-one-quarter" src="./assets/images/wordcloud.png" style="flex-grow: 1"></img>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-content">
-                        <p class="title is-4">Wordcloud</p>
-                        <p class="subtitle is-6">Cloud based story writing</p>
+            <!-- WORDCLOUD -->
+            <div class="column is-full project-column"></div>
+            <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
+                <div class="wordcloud-img" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
+                    <img class="wordcloud-img-actual column is-one-quarter" src="./assets/images/wordcloud.png" style="flex-grow: 1"></img>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                            <p class="title is-4">Wordcloud</p>
+                            <p class="subtitle is-6">Cloud based story writing</p>
+                            </div>
+                        </div>
+                
+                        <div class="content">
+                            Utilizes BigHugeThesaurus and Pexels APIs for image and word search. 
+                            Elements of Bootstrap and Materialize CDN. Linked to a Firebase
+                            Real-time Database & Authorization. Also makes use of Johann Burkard's Highlight plugin.
                         </div>
                     </div>
-            
-                    <div class="content">
-                        Utilizes Node.js with Express-Handlebars, for routing 
-                        and templating, Bulma.io CDN, Okta Authorization, and the Pexels image API. Pulls
-                        from an SQL Database; deployed to Heroku with the JawsDB plugin.
+                </div>
+                <div class="buttons" style="margin-top: 1rem;">
+                    <button class="ui inverted button">Deployed Site</button>
+                    <button class="ui inverted button secondary" style="color: white;">Github Repo</button>
+                </div>
+            </div>
+            <!-- BOOKTIONARY -->
+            <div class="column is-full project-column"></div>
+            <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
+                <div class="booktionary-img" style="position: relative; top: 40px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
+                    <img class="booktionary-img-actual column is-one-fifth" src="./assets/images/booktionary_logo.png" style="flex-grow: 1"></img>
+                    <img class="booktionary-text-actual column is-three-fifths" src="./assets/images/booktionary_text.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                            <p class="title is-4">Booktionary</p>
+                            <p class="subtitle is-6">React book search app</p>
+                            </div>
+                        </div>
+                
+                        <div class="content">
+                            Full-stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
+                            Uses Axios for React-dom-router requests. Deployed to Heroku; utilizes the Heroku mLab plugin.
+                        </div>
                     </div>
+                </div>
+                <div class="buttons" style="margin-top: 1rem;">
+                    <button class="ui inverted button">Deployed Site</button>
+                    <button class="ui inverted button secondary" style="color: white;">Github Repo</button>
+                </div>
+            </div>
+            <!-- END OF MAIN THREE PROJECTS -->
+        </div>
+        
+        <div class="link-buttons is-vcentered" style="display: flex; justify-content: center;">
+            <div class="link-buttons-inner">
+                <svg class="linksvg" viewBox="0 0 320 300">
+                    <defs>
+                        <linearGradient
+                            inkscape:collect="always"
+                            id="linearGradient"
+                            x1="13"
+                            y1="193.49992"
+                            x2="307"
+                            y2="193.49992"
+                            gradientUnits="userSpaceOnUse">
+                        <stop
+                            style="stop-color:#ff00ff;"
+                            offset="0"
+                            id="stop876" />
+                        <stop
+                            style="stop-color:#ff0000;"
+                            offset="1"
+                            id="stop878" />
+                        </linearGradient>
+                    </defs>
+                    <path class="linkpath" d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                </svg>
+                <div class="form link-buttons-form">
+                    <button class="button is-light is-medium is-rounded github link-button">
+                        <span class="icon is-medium">
+                            <img src="./assets/images/github_icon.png"></img>
+                        </span>
+                        <span>Github</span>
+                    </button>
+                    <button class="button is-dark is-medium is-rounded artstation link-button">
+                        <span class="icon is-medium">
+                            <img src="./assets/images/artstation_icon.png"></img>
+                        </span>
+                        <span>Artstation</span>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- END OF PROJECTS -->
     
     <!-- COLOR CHANGE ANIMATION -->
@@ -194,6 +272,7 @@
     <script type="text/javascript" src="./assets/js/animejs/lib/anime.min.js"></script>
     <script type="text/javascript" src="./assets/js/sphere.js"></script>
     <script type="text/javascript" src="./assets/js/pop.js"></script>
+    <script type="text/javascript" src="./assets/js/buttons.js"></script>
     <!-- NAV DROPDOWN -->
     <script>
         $("#collapse-button").on('click', function(e) {
@@ -203,6 +282,20 @@
         });
 
         $('.ui.dropdown').dropdown();
+    </script>
+    <script>
+        $(".artstation").on("mouseenter", function(e) {
+            $('.artstation').transition('pulse');
+        });
+        $(".github").on("mouseenter", function(e) {
+            $('.github').transition('pulse');
+        });
+        $(".artstation").on("click", function(e) {
+            $('.artstation').transition('jiggle');
+        });
+        $(".github").on("click", function(e) {
+            $('.github').transition('jiggle');
+        });
     </script>
 
 
