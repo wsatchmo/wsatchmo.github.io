@@ -208,7 +208,10 @@ body{
     transition: 0.5s;
 }
 
-.card-content{
+.media{
+    overflow: hidden;
+}
+.media-content{
     overflow: hidden;
 }
 /* END MAIN CONTENT */
