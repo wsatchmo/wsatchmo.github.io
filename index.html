@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Will Satcher</title>
+    <link rel="shortcut icon" href="./favicon.ico">
     <!-- CSS Styling -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- Animate.css Styling -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Bulma Link -->
@@ -14,14 +17,17 @@
     <!-- Fomantic CDN -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+    <!-- Fontawesome Reference -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  
 </head>
 
-<body>
+<body class="loading">
     <div class="ui page grid" style="width: 100%; padding: 0%; border-radius: 0%;">
         <div class="computer tablet only row">
             <div class="ui inverted menu navbar" style="border-radius: 0%; height: 60px;">
                 <a href="" class="brand item">Will Satcher</a>
-                <a class="item" href="index.html">About</a>
+                <a class="item modal-open" data-target="#about-modal">About</a>
                 <a class="ui dropdown inverted item">Projects
                   <i class="dropdown icon"></i>
                   <div class="menu">
@@ -47,7 +53,7 @@
         <div class="mobile only narrow row">
             <div id="mini-nav" class="ui inverted navbar menu">
                 <a class="brand item">Will Satcher</a>
-                <a id="logo-box" class="item">
+                <a id="logo-box modal-open" class="item" data-target="#about-modal">
                     <img id="logo-satchmo" class="ui middle aligned mini spaced image" src="./assets/images/satchmo.png" alt="Satchmo">
                 </a>
                 <div class="right menu open">
@@ -89,22 +95,22 @@
         <!-- MAIN THREE PROJECTS -->
         <div id="dev-column" class="main-three">
             <!-- PIXLA -->
-            <div class="column is-full project-column"></div>
+            <div class="column is-full"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="pixla-img" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img class="pixla-img-actual column is-one-quarter" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
-                    <img class="pixla-text-actual column is-three-quarters" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
+                <div class="pixla-img project-img modal-open" data-target="#pixla-modal" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
+                    <img class="pixla-img-actual column is-one-quarter is-one-sixth-mobile" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
+                    <img class="pixla-text-actual column is-three-quarters is-one-half-mobile" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
                 </div>
-                <div class="card">
+                <div class="card modal-open" data-target="#pixla-modal">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                            <p class="title is-4">Pixla</p>
-                            <p class="subtitle is-6">Visual-centric social media</p>
+                            <p class="title is-4 sel">Pixla</p>
+                            <p class="subtitle is-6 sel">Visual-centric social media</p>
                             </div>
                         </div>
                 
-                        <div class="content">
+                        <div class="content sel">
                             Utilizes Node.js with Express-Handlebars for routing 
                             and templating, Bulma.io CDN, Okta Authorization, and the Pexels image API. 
                             Linked to an SQL Database; deployed to Heroku with the JawsDB plugin.
@@ -119,22 +125,22 @@
             <!-- WORDCLOUD -->
             <div id="scrollto" class="column is-full project-column"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="wordcloud-img" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
+                <div class="wordcloud-img modal-open" data-target="#wordcloud-modal" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
                     <img class="wordcloud-img-actual column is-one-quarter" src="./assets/images/wordcloud.png" style="flex-grow: 1"></img>
                 </div>
-                <div class="card">
+                <div class="card modal-open" data-target="#wordcloud-modal">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                            <p class="title is-4">Wordcloud</p>
-                            <p class="subtitle is-6">Cloud based story writing</p>
+                            <p class="title is-4 sel">Wordcloud</p>
+                            <p class="subtitle is-6 sel">Cloud-based story writing</p>
                             </div>
                         </div>
                 
-                        <div class="content">
-                            Utilizes BigHugeThesaurus and Pexels APIs for image and word search. 
+                        <div class="content sel">
+                            Word and image search conducted with BigHugeThesaurus and Pexels APIs. 
                             Elements of Bootstrap and Materialize CDN. Linked to a Firebase
-                            Real-time Database & Authorization. Also makes use of Johann Burkard's Highlight plugin.
+                            Real-Time Database & Authorization. Also makes use of Johann Burkard's Highlight plugin.
                         </div>
                     </div>
                 </div>
@@ -146,22 +152,22 @@
             <!-- BOOKTIONARY -->
             <div class="column is-full project-column"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="booktionary-img" style="position: relative; top: 40px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img class="booktionary-img-actual column is-one-fifth" src="./assets/images/booktionary_logo.png" style="flex-grow: 1"></img>
-                    <img class="booktionary-text-actual column is-three-fifths" src="./assets/images/booktionary_text.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
+                <div class="booktionary-img modal-open" data-target="#booktionary-modal" style="position: relative; top: 40px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
+                    <img class="booktionary-img-actual column is-one-fifth is-one-fifth-mobile" src="./assets/images/booktionary_logo.png" style="flex-grow: 1"></img>
+                    <img class="booktionary-text-actual column is-three-fifths is-three-fifths-mobile" src="./assets/images/booktionary_text.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
                 </div>
-                <div class="card">
+                <div class="card modal-open" data-target="#booktionary-modal">
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                            <p class="title is-4">Booktionary</p>
-                            <p class="subtitle is-6">React book search app</p>
+                            <p class="title is-4 sel">Booktionary</p>
+                            <p class="subtitle is-6 sel">React book search & save</p>
                             </div>
                         </div>
                 
-                        <div class="content">
-                            Full-stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
-                            Uses Axios for React-dom-router requests. Deployed to Heroku with the Heroku mLab plugin.
+                        <div class="content sel">
+                            Full-Stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
+                            Uses Axios for React Router requests. Deployed to Heroku with the Heroku mLab plugin.
                         </div>
                     </div>
                 </div>
@@ -224,7 +230,7 @@
                         <div class="media">
                             <div class="media-content">
                                 <header class="card-header" style="background-color: white;">
-                                    <p id="illus" class="card-header-title is-centered">Illutration & 3D Design</p>
+                                    <p id="illus" class="card-header-title is-centered sel">Illustration & 3D Design</p>
                                 </header>
                             </div>
                         </div>
@@ -232,7 +238,7 @@
                 </div>
             </div>
             <div id="gg-screen"></div>
-            <div class="gg-box">
+            <div class="gg-box" style="padding-bottom: 70px;">
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/Battle_Top.jpg">
                 </div>
@@ -247,6 +253,9 @@
                 </div>
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/Self1.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/OROSHI_Grandpa_draw.jpg">
                 </div>
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/Pilot_Matte_White_Front.jpg">
@@ -276,6 +285,9 @@
                     <img src="./assets/images/illustrations/VIVI_fin_angle.jpg">
                 </div>
                 <div class="gg-element">
+                    <img src="./assets/images/illustrations/VIVI_toon.jpg">
+                </div>
+                <div class="gg-element">
                     <img src="./assets/images/illustrations/vivi_light_diff_ao_norm.jpg">
                 </div>
                 <div class="gg-element">
@@ -287,9 +299,9 @@
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/malik_drifter.jpg">
                 </div>
-                <div class="gg-element">
+                <!-- <div class="gg-element">
                     <img src="./assets/images/illustrations/Shogunflat.jpg">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -335,20 +347,152 @@
             </svg>
         </div>
     </div>
-   
-
-      
+    
+    <!-- FOOTER   -->
     <footer class="footer" id="foot">
         <div class="container is-fluid">
             <div class="content has-text-centered" style="margin-bottom: 5px;">
                 <p style="margin-top: 10px;">
-                <a href="https://github.com/wsatchmo" target="_blank" style="padding-bottom: 2%;">Will Satcher</a>
+                    <a class="footlink" href="https://github.com/wsatchmo" target="_blank" style="padding-bottom: 2%;">&#x00A9 Will Satcher <span id="year"></span></a>
+                    <i class="fas fa-code" style="color: #666;"></i>
+                    <i class="fas fa-palette" style="color: #666;"></i>
                 </p>
             </div>
         </div>
     </footer>
+   
+    <!-- MODALS -->
+    <!-- ABOUT -->
+    <div id="about-modal" class="modal animated fadeIn">
+        <div class="modal-background"></div>
+        <div class="card" id="modal-content" style="margin: 3%;">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-96x96">
+                            <img src="./assets/images/self-circular.png" alt="Self-Portrait">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-8 sel" style="margin-top: 2.5vw;">
+                        Will Satcher
+                        </p>
+                        <p class="subtitle sel">Full Stack Developer / Illustrator & Graphic Designer </p>
+                    </div>
+                </div>
+                <div class="content sel">
+                    Full stack web developer with a background in Graphic Design and a practiced knowledge of aesthetic principles. 
+                    Effective at producing creative solutions to complicated problems, and pulling from a rich knowledge of design to devise attractive interfaces and smooth experiences for users.
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- PIXLA MODAL -->
+    <div id="pixla-modal" class="modal animated fadeIn">
+        <div class="modal-background"></div>
+        <div id="pixla-modal-inner" class="card project-modal">
+            <div class="card-image" >
+                <figure id="pixla-modal-figure" class="image is-4by3" >
+                <img id="pixla-modal-img" src="./assets/images/screenshots/pixla_screenshot.png" style="object-fit: cover;" alt="Pixla Screenshot">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media" style="margin-bottom: 1rem;">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                        <img src="./assets/images/pixlalogo.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4" style="margin-top: 2.5vw;">Pixla</p>
+                        <p class="subtitle is-6">Visual-centric social media</p>
+                    </div>
+                </div>
+                <div class="content" style="font-size: 12px; line-height: 14px;">
+                    Utilizes Node.js with Express-Handlebars for routing 
+                    and templating, Bulma.io CDN, Okta Authorization, and the Pexels image API. 
+                    Linked to an SQL Database; deployed to Heroku with the JawsDB plugin.
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a href="https://pixla.herokuapp.com" class="card-footer-item">Deployed Site</a>
+                <a href="https://github.com/wsatchmo/Pixla" class="card-footer-item">Github Repo</a>
+            </footer>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- WORDCLOUD MODAL -->
+    <div id="wordcloud-modal" class="modal animated fadeIn">
+        <div class="modal-background"></div>
+        <div id="wordcloud-modal-inner" class="card project-modal">
+            <div class="card-image" >
+                <figure id="wordcloud-modal-figure" class="image is-4by3" >
+                <img id="wordcloud-modal-img" src="./assets/images/screenshots/wordcloud_screenshot.png" style="object-fit: cover;" alt="Worcloud Screenshot">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media" style="margin-bottom: 1rem;">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                        <img src="./assets/images/cloud.png" alt="Wordcloud Logo">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4" style="margin-top: 2.5vw;">Pixla</p>
+                        <p class="subtitle is-6">Cloud-based story writing</p>
+                    </div>
+                </div>
+                <div class="content" style="font-size: 12px; line-height: 14px;">
+                    Word and image search conducted with BigHugeThesaurus and Pexels APIs. 
+                    Elements of Bootstrap and Materialize CDN. Linked to a Firebase
+                    Real-Time Database & Authorization. Also makes use of Johann Burkard's Highlight plugin.
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a href="https://wsatchmo.github.io/Wordcloud" class="card-footer-item">Deployed Site</a>
+                <a href="https://github.com/wsatchmo/Wordcloud" class="card-footer-item">Github Repo</a>
+            </footer>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- BOOKTIONARY MODAL -->
+    <div id="booktionary-modal" class="modal animated fadeIn">
+        <div class="modal-background"></div>
+        <div id="booktionary-modal-inner" class="card project-modal">
+            <div class="card-image" >
+                <figure id="booktionary-modal-figure" class="image is-4by3" >
+                <img id="booktionary-modal-img" src="./assets/images/screenshots/booktionary_screenshot.png" style="object-fit: cover;" alt="Booktionary Screenshot">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media" style="margin-bottom: 1rem;">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                        <img src="./assets/images/booktionary_logo.png" alt="Booktionary Logo">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4" style="margin-top: 2.5vw;">Booktionary</p>
+                        <p class="subtitle is-6">React book search & save</p>
+                    </div>
+                </div>
+                <div class="content" style="font-size: 12px; line-height: 14px;">
+                    Full-Stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
+                    Uses Axios for React Router requests. Deployed to Heroku with the Heroku mLab plugin.
+                </div>
+            </div>
+            <footer class="card-footer">
+                <a href="https://gentle-forest-73354.herokuapp.com/" class="card-footer-item">Deployed Site</a>
+                <a href="https://github.com/wsatchmo/Booktionary" class="card-footer-item">Github Repo</a>
+            </footer>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    
 
     <script type="text/javascript" src="./assets/js/animejs/lib/anime.min.js"></script>
+    <script type="text/javascript" src="./assets/js/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript" src="./assets/js/sphere.js"></script>
     <script type="text/javascript" src="./assets/js/pop.js"></script>
     <script type="text/javascript" src="./assets/js/buttons.js"></script>
@@ -431,8 +575,63 @@
             }
         })
     </script>
+    <!-- MODALS -->
+    <script>
+        $(".modal-open").click(function() {
+            var target = $(this).data("target");
+            console.log(target);
+            $("html").addClass("is-clipped");
+            $(target).addClass("is-active");
+        });
 
+        $(".modal-close").click(function() {
+            $("html").removeClass("is-clipped");
+            $(this).parent().removeClass("is-active");
+        });
 
+        $(".modal-background").click(function() {
+            $("html").removeClass("is-clipped");
+            $(this).parent().removeClass("is-active");
+        });
+    </script>
+    <!-- LOADING -->
+    <script>
+        imagesLoaded(document.body, () => document.body.classList.remove('loading'));
+    </script>
+    <!-- COPYRIGHT YEAR -->
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <!-- MODAL RESIZE -->
+    <script>
+        $(window).on('resize', function() {
+            if(($(window).width() > 700 && $(window).height() < 525) || $(window).width() > 850) {
+                $('#pixla-modal-figure').removeClass('is-4by3');
+                $('#pixla-modal-figure').addClass('is-3by1');
+                $('#pixla-modal-img').attr('src', "./assets/images/screenshots/screenshot_pixla_long.png");
+                
+                $('#wordcloud-modal-figure').removeClass('is-4by3');
+                $('#wordcloud-modal-figure').addClass('is-3by1');
+                $('#wordcloud-modal-img').attr('src', "./assets/images/screenshots/screenshot_wordcloud_long.png");
+                
+                $('#booktionary-modal-figure').removeClass('is-4by3');
+                $('#booktionary-modal-figure').addClass('is-3by1');
+                $('#booktionary-modal-img').attr('src', "./assets/images/screenshots/screenshot_booktionary_long.png");
+            }else{
+                $('#pixla-modal-figure').addClass('is-4by3');
+                $('#pixla-modal-figure').removeClass('is-3by1');
+                $('#pixla-modal-img').attr('src', "./assets/images/screenshots/pixla_screenshot.png");
+                
+                $('#wordcloud-modal-figure').addClass('is-4by3');
+                $('#wordcloud-modal-figure').removeClass('is-3by1');
+                $('#wordcloud-modal-img').attr('src', "./assets/images/screenshots/wordcloud_screenshot.png");
+                
+                $('#booktionary-modal-figure').addClass('is-4by3');
+                $('#booktionary-modal-figure').removeClass('is-3by1');
+                $('#booktionary-modal-img').attr('src', "./assets/images/screenshots/booktionary_screenshot.png");
+            }
+        })
+    </script>
 </body>
 </html>
 

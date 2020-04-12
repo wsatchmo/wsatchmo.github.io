@@ -7,6 +7,11 @@ body{
     position: relative;
 }
 
+.sel::selection{
+    color: rgba(75,165,205,1);
+    background: rgba(0,0,0,0);
+}
+
 #dev-column{
     transition-timing-function: ease-in;
     /* Quick on the way out */
@@ -16,6 +21,18 @@ body{
     transition-timing-function: ease-in;
     /* Quick on the way out */
     transition: 0.15s;
+}
+
+.project-modal{
+    margin: 30vw 20vw 30vw 20vw;
+}
+@media (max-width: 349px) {
+    .project-modal{
+        margin: 30vw 10vw 30vw 10vw;
+    }
+}
+.modal{
+    z-index: 70 !important;
 }
 
 /* ANIM STUFF */
@@ -35,7 +52,6 @@ body{
     width: 100%;
     height: 100%;
     position: fixed;
-    overflow-y: scroll;
     top: 0px;
 }
 
@@ -108,7 +124,6 @@ body{
     #nav-collapsed{
         max-width: 47%;
     }
-
 }
 
 .ui.vertical.menu{
@@ -127,16 +142,54 @@ body{
 .pixla-text-actual{
     -webkit-filter: drop-shadow(.25em .25em 0px #333333); /* Chrome, Safari, Opera */
     filter: drop-shadow(.25em .25em 0px #333333);
+    transition-timing-function: ease-in-out;
+    /* Very fast on the way in & out */
+    transition: 0.1s;
 }
 
 .wordcloud-img-actual{
     -webkit-filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88)); /* Chrome, Safari, Opera */
     filter: drop-shadow(.35em .35em 0px rgb(1, 88, 88));
+    transition-timing-function: ease-in-out;
+    /* Very fast on the way in & out */
+    transition: 0.1s;
 }
 
 .booktionary-text-actual{
     -webkit-filter: drop-shadow(.25em .25em 0px #333333); /* Chrome, Safari, Opera */
     filter: drop-shadow(.25em .25em 0px r#333333);
+    transition-timing-function: ease-in-out;
+    /* Very fast on the way in & out */
+    transition: 0.1s;
+}
+.pixla-img-actual{
+    transition-timing-function: ease-in-out;
+    /* Very fast on the way in & out */
+    transition: 0.1s;
+}
+.booktionary-img-actual{
+    transition-timing-function: ease-in-out;
+    /* Very fast on the way in & out */
+    transition: 0.1s;
+}
+@media only screen and (max-width: 769px){
+    .booktionary-text-actual{
+        padding-left: .5% !important;
+        padding-bottom: 2em !important;
+    }
+    .pixla-img-actual{
+        padding-bottom: .25em !important;
+        padding-left: 1em !important;
+    }
+    .pixla-text-actual{
+        padding-top: 0px !important;
+        padding-left: .25em !important;
+    }
+}
+@media only screen and (max-width: 769px){
+    .project-button{
+        margin-top: 7px;
+    }
 }
 
 .container{
@@ -335,4 +388,34 @@ body{
 
 #foot{
     padding: 0%;
+    background-color: #1b1c1d;
+}
+
+.footlink{
+    color: white;
+}
+.footlink:hover{
+    color: rgba(75,165,205,1);
+}
+/* END FOOTER */
+
+/* PAGE LOADER */
+.js .loading::before,
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+}
+
+.js .loading::after {
+	background: url(../images/satchmo.png) no-repeat 50% 50%;
+	background-size: 5em;
+	pointer-events: none;
+	opacity: 0.1;
+	animation: loaderAnim 1s linear infinite alternate forwards;
 }
