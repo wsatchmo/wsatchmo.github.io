@@ -30,10 +30,7 @@
         } else {
             $(".se-pre-con").css("background", "url('../images/loader/loading2.gif') center no-repeat #262626;");
         }
-        $(".wordcloud-img-actual").ready(function() {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");
-        });
+        setInterval(function(){ $(".se-pre-con").fadeOut("slow"); }, 3500);
     </script>
 </head>
 
@@ -45,18 +42,18 @@
                 <a class="brand item"><strong>Will Satcher</strong></a>
                 <a class="item modal-open" data-target="#about-modal">About</a>
                 <a class="ui dropdown inverted item">Projects
-                  <i class="dropdown icon"></i>
-                  <div class="menu">
-                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://pixla.herokuapp.com')">Pixla</div>
-                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://wsatchmo.github.io/Wordcloud')">Wordcloud</div>
-                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://gentle-forest-73354.herokuapp.com/')">Booktionary</div>
-                    <div class="ui divider"></div>
-                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://www.artstation.com/wsatcher/albums/985292')">Illustration</div>
-                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://www.artstation.com/wsatcher/albums/1223804')">3D Design</div>
-                    <div class="ui divider"></div>
-                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://github.com/wsatchmo')">Github</div>
-                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://artstation.com/wsatcher')">Artstation</div>
-                  </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://pixla.herokuapp.com')">Pixla</div>
+                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://wsatchmo.github.io/Wordcloud')">Wordcloud</div>
+                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://gentle-forest-73354.herokuapp.com/')">Booktionary</div>
+                        <div class="ui divider"></div>
+                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://www.artstation.com/wsatcher/albums/985292')">Illustration</div>
+                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://www.artstation.com/wsatcher/albums/1223804')">3D Design</div>
+                        <div class="ui divider"></div>
+                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://github.com/wsatchmo')">Github</div>
+                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://artstation.com/wsatcher')">Artstation</div>
+                    </div>
                 </a>
                 <div class="right menu">
                     <a class="dev dev-only item">Development</a>
@@ -114,8 +111,8 @@
             <div class="column is-full"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
                 <div class="pixla-img project-img modal-open" data-target="#pixla-modal" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img class="pixla-img-actual column is-one-quarter is-one-sixth-mobile" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
-                    <img class="pixla-text-actual column is-three-quarters is-one-half-mobile" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
+                    <img class="pixla-img-actual column column is-one-fifth is-one-fifth-mobile" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
+                    <img class="pixla-text-actual column is-three-fifths is-three-fifths-mobile" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
                 </div>
                 <div class="card modal-open" data-target="#pixla-modal">
                     <div class="card-content">
