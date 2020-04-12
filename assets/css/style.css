@@ -5,6 +5,7 @@ html {
 body{
     background-color: #1B1C1D;
     position: relative;
+    overflow: initial !important;
 }
 
 .sel::selection{
@@ -33,6 +34,10 @@ body{
 }
 .modal{
     z-index: 70 !important;
+}
+
+.modal-open{
+    cursor: pointer;
 }
 
 /* ANIM STUFF */
@@ -85,6 +90,10 @@ body{
 /* END ANIM STUFF */
 
 /* NAVBAR STUFF */
+#name{
+    cursor: default;
+}
+
 .ui.navbar {
     margin-top: 0px !important;
     width: 100%;
