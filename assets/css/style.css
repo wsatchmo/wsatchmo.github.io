@@ -209,7 +209,7 @@ body{
 }
 
 .card-content{
-    overflow-y: hidden;
+    overflow: hidden;
 }
 /* END MAIN CONTENT */
 
