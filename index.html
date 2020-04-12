@@ -594,14 +594,6 @@
             $(this).parent().removeClass("is-active");
         });
     </script>
-    <!-- LOADING -->
-    <script>
-        imagesLoaded(document.body, () => document.body.classList.remove('loading'));
-    </script>
-    <!-- COPYRIGHT YEAR -->
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
     <!-- MODAL RESIZE -->
     <script>
         $(window).on('resize', function() {
@@ -632,6 +624,15 @@
             }
         })
     </script>
+    <!-- LOADING -->
+    <script>
+        $(".loading").imagesLoaded(() => $(".loading").removeClass('loading'));
+    </script>
+    <!-- COPYRIGHT YEAR -->
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
 
