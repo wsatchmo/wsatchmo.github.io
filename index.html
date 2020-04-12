@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Modernizr for Loading -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <!-- Bulma Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <!-- Fomantic CDN -->
@@ -19,10 +21,26 @@
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
     <!-- Fontawesome Reference -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  
+    <!-- Loader -->
+    <script>
+        var hr = (new Date()).getHours();
+        console.log(hr);
+        if (8 < hr < 16){
+            $(".se-pre-con").css("background", "url('../images/loader/loading.gif') center no-repeat #FFFFFF;");
+        } else if (16 <= hr < 24){
+            $(".se-pre-con").css("background", "url('../images/loader/loading2.gif') center no-repeat #262626;");
+        } else {
+            $(".se-pre-con").css("background", "url('../images/loader/loading3.gif') center no-repeat #231f20;");
+        }
+        $(document).ready(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");
+        });
+    </script>
 </head>
 
-<body class="loading">
+<body>
+    <div class="se-pre-con"></div>
     <div class="ui page grid" style="width: 100%; padding: 0%; border-radius: 0%;">
         <div class="computer tablet only row">
             <div class="ui inverted menu navbar" style="border-radius: 0%; height: 60px;">
@@ -492,7 +510,6 @@
     
 
     <script type="text/javascript" src="./assets/js/animejs/lib/anime.min.js"></script>
-    <script type="text/javascript" src="./assets/js/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript" src="./assets/js/sphere.js"></script>
     <script type="text/javascript" src="./assets/js/pop.js"></script>
     <script type="text/javascript" src="./assets/js/buttons.js"></script>
@@ -625,9 +642,7 @@
         })
     </script>
     <!-- LOADING -->
-    <script>
-        $(".loading").imagesLoaded(() => $(".loading").removeClass('loading'));
-    </script>
+
     <!-- COPYRIGHT YEAR -->
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
