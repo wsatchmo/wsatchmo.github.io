@@ -21,18 +21,16 @@
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
     <!-- Fontawesome Reference -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- Loader -->
+    <!-- Loader ~[MUST BE HERE FOR PROPER LOADING]~ -->
     <script>
         var hr = (new Date()).getHours();
         console.log(hr);
-        if (8 < hr < 16){
+        if (6 < hr < 18){
             $(".se-pre-con").css("background", "url('../images/loader/loading.gif') center no-repeat #FFFFFF;");
-        } else if (16 <= hr < 24){
-            $(".se-pre-con").css("background", "url('../images/loader/loading2.gif') center no-repeat #262626;");
         } else {
-            $(".se-pre-con").css("background", "url('../images/loader/loading3.gif') center no-repeat #231f20;");
+            $(".se-pre-con").css("background", "url('../images/loader/loading2.gif') center no-repeat #262626;");
         }
-        window.addEventListener('load', function() {
+        $(".wordcloud-img-actual").ready(function() {
             // Animate loader off screen
             $(".se-pre-con").fadeOut("slow");
         });
@@ -116,7 +114,7 @@
             <div class="column is-full"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
                 <div class="pixla-img project-img modal-open" data-target="#pixla-modal" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img class="pixla-img-actual column is-one-quarter is-one-sixth-mobile" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
+                    <img class="pixla-img-actual column is-one-quarter is-one-fifth-mobile" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
                     <img class="pixla-text-actual column is-three-quarters is-one-half-mobile" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
                 </div>
                 <div class="card modal-open" data-target="#pixla-modal">
@@ -220,7 +218,8 @@
                             id="stop878" />
                         </linearGradient>
                     </defs>
-                    <path class="linkpath" d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                    <path class="linkpath" d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 
+                    -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
                 </svg>
                 <div class="form link-buttons-form">
                     <button onClick="parent.open('https://github.com/wsatchmo')" class="button is-light is-medium is-rounded github link-button">
@@ -267,34 +266,7 @@
                     <img src="./assets/images/illustrations/malik_zero.jpg">
                 </div>
                 <div class="gg-element">
-                    <img src="./assets/images/illustrations/Samuraiflat.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/Self1.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/OROSHI_Grandpa_draw.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/Pilot_Matte_White_Front.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/Pilot_real_front.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/Pilot_Black_tinscarf.jpg">
-                </div>
-                <div class="gg-element">
                     <img src="./assets/images/illustrations/Tyro_Pitkid.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/NunoftheScourge.41_HDR_1.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/NunoftheScourge.37.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/The_Last_Watcher_Flat_insta.jpg">
                 </div>
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/VIVI_bkgrnd.jpg">
@@ -307,6 +279,33 @@
                 </div>
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/vivi_light_diff_ao_norm.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Self1.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Samuraiflat.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/OROSHI_Grandpa_draw.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/The_Last_Watcher_Flat_insta.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Pilot_Matte_White_Front.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Pilot_real_front.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Pilot_Black_tinscarf.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/NunoftheScourge.41_HDR_1.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/NunoftheScourge.37.jpg">
                 </div>
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/Shuten_Doji_Reborn.jpg">
