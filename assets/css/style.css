@@ -216,9 +216,12 @@ body{
         padding-left: .5em !important;
     }
 }
-@media only screen and (max-width: 769px){
+@media only screen and (max-width: 374px){
     .project-button{
-        margin-top: 7px;
+        margin-top: 6px !important;
+    }
+    div.buttons{
+        margin-top: .5rem !important;
     }
 }
 
