@@ -32,7 +32,7 @@
         } else {
             $(".se-pre-con").css("background", "url('../images/loader/loading3.gif') center no-repeat #231f20;");
         }
-        $(document).ready(function() {
+        window.addEventListener('load', function() {
             // Animate loader off screen
             $(".se-pre-con").fadeOut("slow");
         });
