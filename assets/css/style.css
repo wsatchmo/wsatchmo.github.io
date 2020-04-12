@@ -207,6 +207,10 @@ body{
     /* Quick on the way out */
     transition: 0.5s;
 }
+
+.card-content{
+    overflow-y: hidden;
+}
 /* END MAIN CONTENT */
 
 /* LINKS */
