@@ -39,9 +39,15 @@ body{
 .modal-open{
     cursor: pointer;
 }
-
+/*  
+ _______       _       
+(_______)     (_)      
+ _______ ____  _ ____  
+|  ___  |  _ \| |    \ 
+| |   | | | | | | | | |
+|_|   |_|_| |_|_|_|_|_|
+*/
 /* ANIM STUFF */
-
 #canvas {
     display: block;
     width: 100vw;
@@ -88,7 +94,14 @@ body{
     }
 }
 /* END ANIM STUFF */
-
+/* 
+ _______             
+(_______)            
+ _     _ _____ _   _ 
+| |   | (____ | | | |
+| |   | / ___ |\ V / 
+|_|   |_\_____| \_/ 
+*/
 /* NAVBAR STUFF */
 #name{
     cursor: default;
@@ -146,7 +159,14 @@ body{
 } 
 
 /* END NAVBAR STUFF */
-
+/*  
+ _______       _       
+(_______)     (_)      
+ _  _  _ _____ _ ____  
+| ||_|| (____ | |  _ \ 
+| |   | / ___ | | | | |
+|_|   |_\_____|_|_| |_|
+*/
 /* MAIN CONTENT */
 .pixla-text-actual{
     -webkit-filter: drop-shadow(.25em .25em 0px #333333); /* Chrome, Safari, Opera */
@@ -215,7 +235,14 @@ body{
     overflow: hidden;
 }
 /* END MAIN CONTENT */
-
+/*  
+ _       _       _          
+(_)     (_)     | |         
+ _       _ ____ | |  _  ___ 
+| |     | |  _ \| |_/ )/___)
+| |_____| | | | |  _ (|___ |
+|_______)_|_| |_|_| \_|___/
+*/
 /* LINKS */
 .link-buttons-inner{
     position: absolute;
@@ -251,7 +278,14 @@ body{
     left: 42px;
 }
 /* END LINKS */
-
+/* 
+ ______ _            
+(_____ (_)           
+ _____) )  ____  ___ 
+|  ____/ |/ ___)/___)
+| |    | ( (___|___ |
+|_|    |_|\____|___/ 
+*/
 /* GRID GALLERY */
 .illus-column{
     position: relative;
