@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- Modernizr for Loading -->
+    <!-- Modernizr for Feature Detecting [Loader] -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <!-- Bulma Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
@@ -21,19 +21,27 @@
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
     <!-- Fontawesome Reference -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- Loader ~[MUST BE HERE FOR PROPER LOADING]~ -->
+    <!-- Loader ~[MUST BE HERE FOR PROPER PRE-LOADING]~ -->
     <script>
         var hr = (new Date()).getHours();
         console.log(hr);
-        if (6 < hr < 18){
+        if (hr > 6 && hr < 18){
             $(".se-pre-con").css("background", "url('../images/loader/loading.gif') center no-repeat #FFFFFF;");
-        } else {
-            $(".se-pre-con").css("background", "url('../images/loader/loading2.gif') center no-repeat #262626;");
         }
         setInterval(function(){ $(".se-pre-con").fadeOut("slow"); }, 3270);
     </script>
 </head>
-
+<!--  
+__                            __         ___            __    __                     
+|  \                          |  \       /   \          |  \  |  \                    
+| $$  ______    ______    ____| $$      |  $$$\         | $$\ | $$  ______  __     __ 
+| $$ /      \  |      \  /      $$       \$$ $$__       | $$$\| $$ |      \|  \   /  \
+| $$|  $$$$$$\  \$$$$$$\|  $$$$$$$      | \$$$/  \      | $$$$\ $$  \$$$$$$\\$$\ /  $$
+| $$| $$  | $$ /      $$| $$  | $$      | $$\$$ $$      | $$\$$ $$ /      $$ \$$\  $$ 
+| $$| $$__/ $$|  $$$$$$$| $$__| $$      | $$_\$$\       | $$ \$$$$|  $$$$$$$  \$$ $$  
+| $$ \$$    $$ \$$    $$ \$$    $$       \$$  \$$\      | $$  \$$$ \$$    $$   \$$$   
+ \$$  \$$$$$$   \$$$$$$$  \$$$$$$$        \$$$$ $$       \$$   \$$  \$$$$$$$    \$  
+-->
 <body>
     <div class="se-pre-con"></div>
     <div class="ui page grid" style="width: 100%; padding: 0%; border-radius: 0%;">
@@ -102,7 +110,16 @@
         </div>
     </div>
     <!--END OF NAVBAR-->
-
+<!--   __                     
+      |  \                    
+  ____| $$  ______  __     __ 
+ /      $$ /      \|  \   /  \
+|  $$$$$$$|  $$$$$$\\$$\ /  $$
+| $$  | $$| $$    $$ \$$\  $$ 
+| $$__| $$| $$$$$$$$  \$$ $$  
+ \$$    $$ \$$     \   \$$$   
+  \$$$$$$$  \$$$$$$$    \$ 
+-->
     <!-- PROJECTS -->
     <div class="container" style="z-index: 6; position: relative;">
         <!-- MAIN THREE PROJECTS -->
@@ -191,7 +208,17 @@
             </div>
             <!-- END OF MAIN THREE PROJECTS -->
         </div>
-        
+<!--         
+__  __            __                 
+|  \|  \          |  \                
+| $$ \$$ _______  | $$   __   _______ 
+| $$|  \|       \ | $$  /  \ /       \
+| $$| $$| $$$$$$$\| $$_/  $$|  $$$$$$$
+| $$| $$| $$  | $$| $$   $$  \$$    \ 
+| $$| $$| $$  | $$| $$$$$$\  _\$$$$$$\
+| $$| $$| $$  | $$| $$  \$$\|       $$
+ \$$ \$$ \$$   \$$ \$$   \$$ \$$$$$$$
+-->
         <!-- BUTTONS -->
         <div class="link-buttons is-vcentered" style="display: flex; justify-content: center;">
             <div class="link-buttons-inner">
@@ -235,7 +262,17 @@
             </div>
         </div>
         <!-- END OF BUTTONS -->
-
+<!-- 
+      __                     
+      |  \                    
+  ____| $$  ______    _______ 
+ /      $$ /      \  /       \
+|  $$$$$$$|  $$$$$$\|  $$$$$$$
+| $$  | $$| $$    $$ \$$    \ 
+| $$__| $$| $$$$$$$$ _\$$$$$$\
+ \$$    $$ \$$     \|       $$
+  \$$$$$$$  \$$$$$$$ \$$$$$$$
+-->
         <!-- IMAGES -->
         <div id="des-column">
             <div class="column is-full illus-column">
@@ -325,7 +362,16 @@
     <div id="pop" style="max-width: 100%;">
         <canvas id="canvas"></canvas>
     </div>
-
+<!-- 
+    ____
+    .X+.   .
+  .Xx+-.     .
+  XXx++-..
+  XXxx++--..
+  `XXXxx+++--'
+    `XXXxxx'
+       ""   
+-->
     <!-- SPHERE ANIMATION -->
     <div class="anim">
         <div class="sphere-animation" style="height: 100%; width: 100%;">
@@ -374,7 +420,16 @@
             </div>
         </div>
     </footer>
-   
+<!--    
+                             __            __           
+                             |  \          |  \          
+______ ____    ______    ____| $$  ______  | $$  _______ 
+|      \    \  /      \  /      $$ |      \ | $$ /       \
+| $$$$$$\$$$$\|  $$$$$$\|  $$$$$$$  \$$$$$$\| $$|  $$$$$$$
+| $$ | $$ | $$| $$  | $$| $$  | $$ /      $$| $$ \$$    \ 
+| $$ | $$ | $$| $$__/ $$| $$__| $$|  $$$$$$$| $$ _\$$$$$$\
+| $$ | $$ | $$ \$$    $$ \$$    $$ \$$    $$| $$|       $$
+\$$  \$$  \$$  \$$$$$$   \$$$$$$$  \$$$$$$$ \$$ \$$$$$$$ -->
     <!-- MODALS -->
     <!-- ABOUT -->
     <div id="about-modal" class="modal animated fadeIn">
@@ -453,7 +508,7 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <p class="title is-4" style="margin-top: 2.5vw;">Pixla</p>
+                        <p class="title is-4" style="margin-top: 2.5vw;">Wordcloud</p>
                         <p class="subtitle is-6">Cloud-based story writing</p>
                     </div>
                 </div>
@@ -487,7 +542,7 @@
                         </figure>
                     </div>
                     <div class="media-content">
-                        <p class="title is-4" style="margin-top: 2.5vw;">Booktionary</p>
+                        <p class="title is-4 is-3-mobile" style="margin-top: 2.5vw;">Booktionary</p>
                         <p class="subtitle is-6">React book search & save</p>
                     </div>
                 </div>
@@ -503,8 +558,17 @@
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
-    
-
+<!--     
+    _____   ______  
+    |     \ /      \ 
+     \$$$$$|  $$$$$$\
+       | $$| $$___\$$
+  __   | $$ \$$    \ 
+ |  \  | $$ _\$$$$$$\
+ | $$__| $$|  \__| $$
+  \$$    $$ \$$    $$
+   \$$$$$$   \$$$$$$
+ -->
     <script type="text/javascript" src="./assets/js/animejs/lib/anime.min.js"></script>
     <script type="text/javascript" src="./assets/js/sphere.js"></script>
     <script type="text/javascript" src="./assets/js/pop.js"></script>
@@ -638,7 +702,6 @@
         })
     </script>
     <!-- LOADING -->
-
     <!-- COPYRIGHT YEAR -->
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
