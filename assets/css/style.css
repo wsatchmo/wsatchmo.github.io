@@ -419,3 +419,9 @@ body{
 	opacity: 0.1;
 	animation: loaderAnim 1s linear infinite alternate forwards;
 }
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+	}
+}
