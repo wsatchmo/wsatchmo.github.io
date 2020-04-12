@@ -47,15 +47,15 @@
                 <a class="ui dropdown inverted item">Projects
                   <i class="dropdown icon"></i>
                   <div class="menu">
-                    <div class="item" onClick="parent.open('https://pixla.herokuapp.com')">Pixla</div>
-                    <div class="item" onClick="parent.open('https://wsatchmo.github.io/Wordcloud')">Wordcloud</div>
-                    <div class="item" onClick="parent.open('https://gentle-forest-73354.herokuapp.com/')">Booktionary</div>
+                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://pixla.herokuapp.com')">Pixla</div>
+                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://wsatchmo.github.io/Wordcloud')">Wordcloud</div>
+                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://gentle-forest-73354.herokuapp.com/')">Booktionary</div>
                     <div class="ui divider"></div>
-                    <div class="item" onClick="parent.open('https://www.artstation.com/wsatcher/albums/985292')">Illustration</div>
-                    <div class="item" onClick="parent.open('https://www.artstation.com/wsatcher/albums/1223804')">3D Design</div>
+                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://www.artstation.com/wsatcher/albums/985292')">Illustration</div>
+                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://www.artstation.com/wsatcher/albums/1223804')">3D Design</div>
                     <div class="ui divider"></div>
-                    <div class="item" onClick="parent.open('https://github.com/wsatchmo')">Github</div>
-                    <div class="item" onClick="parent.open('https://artstation.com/wsatcher')">Artstation</div>
+                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://github.com/wsatchmo')">Github</div>
+                    <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://artstation.com/wsatcher')">Artstation</div>
                   </div>
                 </a>
                 <div class="right menu">
@@ -114,7 +114,7 @@
             <div class="column is-full"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
                 <div class="pixla-img project-img modal-open" data-target="#pixla-modal" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img class="pixla-img-actual column is-one-quarter is-one-fifth-mobile" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
+                    <img class="pixla-img-actual column is-one-quarter is-one-sixth-mobile" src="./assets/images/pixlalogo.png" style="flex-grow: 1"></img>
                     <img class="pixla-text-actual column is-three-quarters is-one-half-mobile" src="./assets/images/pixla_text_light.png" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
                 </div>
                 <div class="card modal-open" data-target="#pixla-modal">
@@ -521,12 +521,6 @@
             $(".navbar-burger").toggleClass("is-active");
             $('#nav-collapsed').transition('slide down');
         });
-        $("#logo-box").hover(() => {
-            $('#logo-satchmo').transition('jiggle');
-        });
-        $("#logo-box").on("click", () => {
-            $('#logo-satchmo').transition('tada');
-        });
 
         $('.ui.dropdown').dropdown();
     </script>
@@ -543,6 +537,12 @@
         });
         $(".github").on("click", function(e) {
             $('.github').transition('jiggle');
+        });
+        $("#logo-box").hover(() => {
+            $('#logo-satchmo').transition('jiggle');
+        });
+        $("#logo-box").on("click", () => {
+            $('#logo-satchmo').transition('tada');
         });
     </script>
     <script type="text/javascript">
