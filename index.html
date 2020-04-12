@@ -69,7 +69,7 @@
         <div class="mobile only narrow row">
             <div id="mini-nav" class="ui inverted navbar menu">
                 <a class="brand item">Will Satcher</a>
-                <a id="logo-box modal-open" class="item" data-target="#about-modal">
+                <a id="logo-box modal-open" onmouseenter="logoHover()" onclick="logoPop()" class="item" data-target="#about-modal">
                     <img id="logo-satchmo" class="ui middle aligned mini spaced image" src="./assets/images/satchmo.png" alt="Satchmo">
                 </a>
                 <div class="right menu open">
@@ -538,12 +538,12 @@
         $(".github").on("click", function(e) {
             $('.github').transition('jiggle');
         });
-        $("#logo-box").hover(() => {
+        function logoHover(){
             $('#logo-satchmo').transition('jiggle');
-        });
-        $("#logo-box").on("click", () => {
+        };
+        function logoPop(){
             $('#logo-satchmo').transition('tada');
-        });
+        };
     </script>
     <script type="text/javascript">
     //DEV/DES ANIMS
