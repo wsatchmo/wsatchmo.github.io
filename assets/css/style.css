@@ -29,9 +29,16 @@ body{
 }
 @media (max-width: 349px) {
     .project-modal{
-        margin: 30vw 10vw 30vw 10vw;
+        margin: 30vh 10vw 30vh 10vw;
     }
 }
+@media (min-width: 700px) and (max-height: 525), (min-width: 850px) and (max-height: 625), 
+(min-width: 1100px) and (max-height: 695), (min-width: 1200px) and (max-height: 750), (min-width: 1500px) and (max-height: 935), (min-width: 2000px) and (max-height: 1000) {
+    .project-modal{
+        margin: 25vh 10vw 25vh 10vw;
+    }
+}
+
 .modal{
     z-index: 70 !important;
 }

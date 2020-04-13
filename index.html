@@ -675,7 +675,8 @@
     <!-- MODAL RESIZE -->
     <script>
         $(window).on('resize', function() {
-            if(($(window).width() > 700 && $(window).height() < 525) || $(window).width() > 850) {
+            if(($(window).width() > 700 && $(window).height() < 525) || ($(window).width() > 850 && $(window).height() < 625)
+                || ($(window).width() > 1200 && $(window).height() < 800) || ($(window).width() > 1500 && $(window).height() < 935) || ($(window).width() > 2000 && $(window).height() < 1000)) {
                 $('#pixla-modal-figure').removeClass('is-4by3');
                 $('#pixla-modal-figure').addClass('is-3by1');
                 $('#pixla-modal-img').attr('src', "./assets/images/screenshots/screenshot_pixla_long.png");
