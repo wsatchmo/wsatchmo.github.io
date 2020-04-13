@@ -33,9 +33,10 @@ body{
     }
 }
 @media (min-width: 700px) and (max-height: 525), (min-width: 850px) and (max-height: 625), 
-(min-width: 1100px) and (max-height: 695), (min-width: 1200px) and (max-height: 750), (min-width: 1500px) and (max-height: 935), (min-width: 2000px) and (max-height: 1000) {
+(min-width: 1200px) and (max-height: 750), (min-width: 1500px) and (max-height: 935), 
+(min-width: 2000px) and (max-height: 1024) {
     .project-modal{
-        margin: 25vh 10vw 25vh 10vw;
+        margin: 25vh 8vw 25vh 8vw !important;
     }
 }
 
