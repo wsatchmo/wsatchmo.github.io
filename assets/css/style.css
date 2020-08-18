@@ -303,6 +303,7 @@ body{
     position: relative;
     top: 515px;
     display: flex;
+    justify-content: space-around;
 }
 
 #tyro-icons{
@@ -313,7 +314,7 @@ body{
     z-index: 50;
 }
 #tyro-icons:hover {
-    transform: scale(1.5) translate(-100px, 0px); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.7) translate(-34%, 0px); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .illus-column{
@@ -373,6 +374,7 @@ body{
 }
 .gg-element img:hover{
     transform: scale(1.5);
+    z-index: 55;
 }
 #gg-screen{
     position: fixed;
