@@ -276,11 +276,20 @@
                         <div class="media">
                             <div class="media-content">
                                 <header class="card-header" style="background-color: white;">
-                                    <p id="illus" class="card-header-title is-centered sel">Illustration & 3D Design</p>
+                                    <p id="illus" class="card-header-title is-centered sel">Illustration & Design</p>
                                 </header>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="twitchFXbox">
+                <video id="videobox" width="600" controls>
+                    <source src="./assets/images/illustrations/FXExamples.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <div id="tyro-icons">
+                    <img src="./assets/images/illustrations/Tyro_Twitch_icons.jpg" alt="Tyro Twitch Examples">
                 </div>
             </div>
             <div id="gg-screen"></div>
@@ -295,13 +304,13 @@
                     <img src="./assets/images/illustrations/Aston_Final_close2.jpg">
                 </div>
                 <div class="gg-element">
-                    <img src="./assets/images/illustrations/Sil_Qassana.jpg">
-                </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/FXExamples.mp4">
-                </div>
-                <div class="gg-element">
                     <img src="./assets/images/illustrations/twitch_example.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Isilitbluish.jpg">
+                </div>
+                <div class="gg-element">
+                    <img src="./assets/images/illustrations/Sil_Qassana.jpg">
                 </div>
                 <div class="gg-element">
                     <img src="./assets/images/illustrations/Battle_Top.jpg">
@@ -586,6 +595,12 @@
     <script type="text/javascript" src="./assets/js/pop.js"></script>
     <script type="text/javascript" src="./assets/js/buttons.js"></script>
     <script type="text/javascript" src="./assets/js/grid-gallery.js"></script>
+
+    <script>
+        //Video Volume
+        var vid = document.getElementById("videobox");
+        vid.volume = 0.5;
+    </script>
 
     <script>
     //NAV ANIM

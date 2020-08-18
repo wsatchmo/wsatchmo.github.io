@@ -298,6 +298,24 @@ body{
 |_|    |_|\____|___/ 
 */
 /* GRID GALLERY */
+
+#twitchFXbox{
+    position: relative;
+    top: 515px;
+    display: flex;
+}
+
+#tyro-icons{
+    width: 525px;
+    padding-top: 5px;
+    padding-left: 5px;
+    transition: transform .2s; /* Animation */
+    z-index: 50;
+}
+#tyro-icons:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 .illus-column{
     position: relative;
     top: 505px;
