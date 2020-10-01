@@ -546,7 +546,7 @@ body{
 }
 @media (max-width:1220px){
     #shade-logo:hover > #shade-logo-img {
-        transform: scale(1.7); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        transform: scale(1.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         z-index: 50;
     }
     #tyro-icons:hover > #tyro-icons-img {
@@ -556,6 +556,12 @@ body{
     .yt-vids{
         width: 70vw;
         height: 38vw;
+    }
+    .biglabel-one{
+        visibility: hidden;
+    }
+    .biglabel-two{
+        visibility: hidden;
     }
 }
 
