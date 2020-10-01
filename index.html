@@ -122,9 +122,10 @@
             <!-- PIXLA -->
             <div class="column is-full"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="pixla-img project-img modal-open" data-target="#pixla-modal" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img class="pixla-img-actual column column is-one-fifth is-one-fifth-mobile" src="./assets/images/pixlalogo.webp" style="flex-grow: 1"></img>
-                    <img class="pixla-text-actual column is-three-fifths is-three-fifths-mobile" src="./assets/images/pixla_text_light.webp" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
+                <div class="pixla-img project-img modal-open" data-target="#pixla-modal" onmouseenter="pixlaHover()" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
+                    <img id="pixla-img-logo" class="pixla-img-actual column column is-one-fifth is-one-fifth-mobile" src="./assets/images/pixlalogo.webp" style="flex-grow: 1"></img>
+                    <img id="pixla-img-pixla" class="pixla-text-actual column is-three-fifths is-three-fifths-mobile" src="./assets/images/pixla_text_light.webp" 
+                    style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
                 </div>
                 <div class="card modal-open" data-target="#pixla-modal">
                     <div class="card-content">
@@ -150,8 +151,8 @@
             <!-- WORDCLOUD -->
             <div id="scrollto" class="column is-full project-column"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="wordcloud-img modal-open" data-target="#wordcloud-modal" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
-                    <img class="wordcloud-img-actual column is-one-quarter" src="./assets/images/wordcloud.webp" style="flex-grow: 1"></img>
+                <div class="wordcloud-img modal-open" data-target="#wordcloud-modal" onmouseenter="wordcloudHover()" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
+                    <img id="wordcloud-img-logo" class="wordcloud-img-actual column " src="./assets/images/wordcloud.webp" style="flex-grow: 1"></img>
                 </div>
                 <div class="card modal-open" data-target="#wordcloud-modal">
                     <div class="card-content">
@@ -177,9 +178,10 @@
             <!-- BOOKTIONARY -->
             <div class="column is-full project-column"></div>
             <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="booktionary-img modal-open" data-target="#booktionary-modal" style="position: relative; top: 40px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img class="booktionary-img-actual column is-one-fifth is-one-fifth-mobile" src="./assets/images/booktionary_logo.webp" style="flex-grow: 1"></img>
-                    <img class="booktionary-text-actual column is-three-fifths is-three-fifths-mobile" src="./assets/images/booktionary_text.webp" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
+                <div class="booktionary-img modal-open" data-target="#booktionary-modal" onmouseenter="booktionaryHover()" style="position: relative; top: 40px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
+                    <img id="booktionary-img-logo" class="booktionary-img-actual column is-one-fifth is-one-fifth-mobile" src="./assets/images/booktionary_logo.webp" style="flex-grow: 1"></img>
+                    <img id="booktionary-img-booktionary" class="booktionary-text-actual column is-three-fifths is-three-fifths-mobile" 
+                    src="./assets/images/booktionary_text.webp" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
                 </div>
                 <div class="card modal-open" data-target="#booktionary-modal">
                     <div class="card-content">
@@ -203,6 +205,69 @@
             </div>
             <!-- END OF MAIN THREE PROJECTS -->
         </div>
+
+<!-- 
+  /¯¯¯¯/|¯¯¯¯|  |¯¯¯¯|\¯¯¯¯\   /¯¯¯¯/\¯¯¯¯\'/¯¯¯¯/|¯¯¯¯|‘ 
+'|.::.| |____|  |..::| |   |'  \____\_¯¯¯¯‘\___ '\|____|  
+'|.:::| \¯¯¯¯\' |::. | |   |'  /¯¯¯¯/¯____‘|¯¯¯¯|\  ¯¯¯\' 
+|\____\/____/|  |____|/____/|°|\____\/____/||____|/____/| 
+|'|;;;;;;;;;'|'|  |;;;;;;;;;| |°| |;;;;;;;|'|;;;;;;;;'|'| 
+\|_________|/° |________ |/  '\|________ '|/|_________|/ 
+-->
+
+        <div id="gdes-column">
+            <div class="column is-full gdes-inner-column">
+                <div class="card" style="background-color: rgba(0, 0, 0, 0);">
+                    <div class="card-content" style="margin-bottom: 100px;">
+                        <div class="media">
+                            <div class="media-content">
+                                <header id="gdes" class="card-header" style="background-color: white;">
+                                    <p id="gdes-word" class="card-header-title is-centered sel">Graphic Design</p>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="throwinshadebox">
+                <div id="shade-logo">
+                    <img id="shade-logo-img" src="./assets/images/illustrations/Throwin_Shade.webp" alt="Throwin Shade Logo">
+                </div>
+                <p class="biglabel-one" style="margin-top: -5px;">Throwin Shade Video Loop</p>
+                <iframe class="yt-vids" width="560" height="315" src="https://www.youtube.com/embed/_o8mDyBv3Zc" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="twitchFXbox">
+                <p class="biglabel-two" style="margin-top: 15px;">Tyro Video & Stream Assets</p>
+                <iframe class="yt-vids" width="560" height="315" src="https://www.youtube.com/embed/XfL7sYM-Jow" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div id="tyro-icons">
+                    <img id="tyro-icons-img" src="./assets/images/illustrations/twitch_example.webp" alt="Tyro Twitch Examples">
+                </div>
+            </div>
+            <div class="gg-box-gdes" style="padding-bottom: 70px;">
+                <div class="gg-element gg-element-labeled">
+                    <img src="./assets/images/illustrations/Tyro_Twitch_icons.webp">
+                    <p class="imglabel">Tyro Music - Twitch Graphic Assets</p>
+                </div>
+                <div class="gg-element gg-element-labeled">
+                    <img src="./assets/images/illustrations/rtl_sqr.webp">
+                    <p class="imglabel">Rose Town Legends - Style Guide</p>
+                </div>
+                <div class="gg-element gg-element-labeled">
+                    <img src="./assets/images/illustrations/blvd_catalog.webp">
+                    <p class="imglabel">BLVD & Protec - Product Catalogs</p>
+                </div>
+                <div class="gg-element gg-element-labeled">
+                    <img src="./assets/images/illustrations/westedge.webp">
+                    <p class="imglabel">West Edge Design Fair - Press Ad</p>
+                </div>
+            </div>
+            <div id="mcasb-box">
+                <iframe id="mca-one" width="560" height="315" src="https://www.youtube.com/embed/aD4HC20z4t0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="mca-two" width="560" height="315" src="https://www.youtube.com/embed/sY2vdOUQtE4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
 <!--         
  __  __            __                 
 |  \|  \          |  \                
@@ -241,13 +306,13 @@
                     -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
                 </svg>
                 <div class="form link-buttons-form">
-                    <button onClick="parent.open('https://github.com/wsatchmo')" class="button is-light is-medium is-rounded github link-button">
+                    <button id="github-btn" onClick="parent.open('https://github.com/wsatchmo')" class="button is-light is-medium is-rounded github link-button">
                         <span class="icon is-medium">
                             <img src="./assets/images/github_icon.webp"></img>
                         </span>
                         <span>Github</span>
                     </button>
-                    <button onClick="parent.open('https://artstation.com/wsatcher')" class="button is-dark is-medium is-rounded artstation link-button">
+                    <button id="artstation-btn" onClick="parent.open('https://artstation.com/wsatcher')" class="button is-dark is-medium is-rounded artstation link-button">
                         <span class="icon is-medium">
                             <img src="./assets/images/artstation_icon.webp"></img>
                         </span>
@@ -272,104 +337,89 @@
         <div id="des-column">
             <div class="column is-full illus-column">
                 <div class="card" style="background-color: rgba(0, 0, 0, 0);">
-                    <div class="card-content" >
+                    <div class="card-content des-dev-divide" >
                         <div class="media">
                             <div class="media-content">
                                 <header class="card-header" style="background-color: white;">
-                                    <p id="illus" class="card-header-title is-centered sel">Illustration & Design</p>
+                                    <p id="illus" class="card-header-title is-centered sel">Illustration</p>
                                 </header>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="twitchFXbox">
-                <video id="videobox" width="600" controls>
-                    <source src="./assets/images/illustrations/FXExamples.mp4" type="video/mp4">
-                    Your browser does not support HTML video.
-                </video>
-                <div id="tyro-icons">
-                    <img src="./assets/images/illustrations/Tyro_Twitch_icons.webp" alt="Tyro Twitch Examples">
-                </div>
-            </div>
             <div id="gg-screen"></div>
             <div class="gg-box" style="padding-bottom: 70px;">
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/Solumn_Basic.webp">
+                <div class="gg-element gg-element-rand">
+                    <img src="./assets/images/illustrations/isoliph.webp">
                 </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/Aston_Final_punched.webp">
-                </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Aston_Final_close2.webp">
                 </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/twitch_example.webp">
+                <div class="gg-element gg-element-rand">
+                    <img src="./assets/images/illustrations/Aston_Final_punched.webp">
                 </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/Isilitbluish.webp">
-                </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
+                    <img src="./assets/images/illustrations/Solumn_Basic.webp">
+                </div>                
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Sil_Qassana.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Battle_Top.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Tyro_Pitkid.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/OROSHI_Grandpa_draw.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/EGG1.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/VIVI_bkgrnd.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/VIVI_fin_angle.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/VIVI_toon.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/vivi_light_diff_ao_norm.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Self1.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Samuraiflat.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Shuten_Doji_Reborn.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/The_Last_Watcher_Flat_insta.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Pilot_real_front.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Pilot_Black_tinscarf.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Pilot_Matte_White_Front.webp">
                 </div>
-                <div class="gg-element">
-                    <img src="./assets/images/illustrations/NunoftheScourge.41_HDR_1.webp">
-                </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/NunoftheScourge.37.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/malik_zero.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/Geishafin.webp">
                 </div>
-                <div class="gg-element">
+                <div class="gg-element gg-element-rand">
                     <img src="./assets/images/illustrations/malik_drifter.webp">
                 </div>
                 <!-- <div class="gg-element">
@@ -384,6 +434,11 @@
     <div id="pop" style="max-width: 100%;">
         <canvas id="canvas"></canvas>
     </div>
+    <div class="box">
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+    </div>
 <!-- 
     ____
     .X+.   .
@@ -393,7 +448,7 @@
   `XXXxx+++--'
     `XXXxxx'
        ""   
--->
+
     <div class="anim">
         <div class="sphere-animation" style="height: 100%; width: 100%;">
             <svg class="sphere" height="100%" width="100%" stroke="rgba(80,80,80,.35)">
@@ -428,7 +483,8 @@
             </svg>
         </div>
     </div>
-    
+-->
+
     <!-- FOOTER   -->
     <footer class="footer" id="foot">
         <div class="container is-fluid">
@@ -590,8 +646,8 @@
   \$$    $$ \$$    $$     \ $..../ $/
    \$$$$$$   \$$$$$$       \_$$$$$/
  -->
+ <!-- <script type="text/javascript" src="./assets/js/sphere.js"></script> -->
     <script type="text/javascript" src="./assets/js/animejs/lib/anime.min.js"></script>
-    <script type="text/javascript" src="./assets/js/sphere.js"></script>
     <script type="text/javascript" src="./assets/js/pop.js"></script>
     <script type="text/javascript" src="./assets/js/buttons.js"></script>
     <script type="text/javascript" src="./assets/js/grid-gallery.js"></script>
@@ -629,6 +685,17 @@
         function logoHover(){
             $('#logo-satchmo').transition('jiggle');
         };
+        function pixlaHover(){
+            $('#pixla-img-logo').transition('bounce');
+            $('#pixla-img-pixla').transition('pulse');
+        };
+        function wordcloudHover(){
+            $('#wordcloud-img-logo').transition('jiggle');
+        };
+        function booktionaryHover(){
+            $('#booktionary-img-logo').transition('tada');
+            $('#booktionary-img-booktionary').transition('bounce');
+        };
         function logoPop(){
             $('#logo-satchmo').transition('tada');
         };
@@ -636,6 +703,12 @@
     <script type="text/javascript">
     //DEV/DES ANIMS
         $(".des-only").click(() => {
+            $("#github-btn").css("background-color", "#d3d3d3");
+            $("#artstation-btn").css("background-color", "#2f2f2f");
+            $(".imglabel").css("color", "darkgrey");
+            $(".wave.-one").css("background", "black");
+            $(".wave.-two").css("background", "white");
+            $(".wave.-three").css("background-color", "black");
             $(".des-only").addClass("active");
             $(".dev-only").removeClass("active");
             $(".both").removeClass("active");
@@ -645,14 +718,20 @@
             if ($(".project-button").hasClass("inverted")){
                 $(".project-button").removeClass("inverted");
             }
-            if (document.body.scrollTop === 0 && !$("#dev-column").hasClass("hidden")){
-                //We are at the top of navbar/screen; scroll to des-column if not in view
-                document.getElementById( 'scrollto' ).scrollIntoView();
-            }
+            // if (document.body.scrollTop === 0 && !$("#dev-column").hasClass("hidden")){
+            //     //We are at the top of navbar/screen; scroll to des-column if not in view
+            //     document.getElementById( 'scrollto' ).scrollIntoView();
+            // }
             $("#dev-column").transition('scale')
             console.log("scrolltop", document.body.scrollTop);
         });
         $(".dev-only").click(() => {
+            $("#github-btn").css("background-color", "color: #f5f5f5;");
+            $("#artstation-btn").css("background-color", "#2f2f2f");
+            $(".imglabel").css("color", "white");
+            $(".wave.-one").css("background", "white");
+            $(".wave.-two").css("background", "black");
+            $(".wave.-three").css("background-color", "white");
             $(".dev-only").addClass("active");
             $(".des-only").removeClass("active");
             $(".both").removeClass("active");
@@ -665,6 +744,12 @@
             $("#des-column").transition('scale');
         })
         $(".both").click(() => {
+            $("#github-btn").css("background-color", "color: #f5f5f5;");
+            $("#artstation-btn").css("background-color", "black");
+            $(".imglabel").css("color", "white");
+            $(".wave.-one").css("background", "grey");
+            $(".wave.-two").css("background", "black");
+            $(".wave.-three").css("background-color", "white");
             $(".both").addClass("active");
             $(".dev-only").removeClass("active");
             $(".des-only").removeClass("active");

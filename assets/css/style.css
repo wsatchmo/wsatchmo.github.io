@@ -23,6 +23,14 @@ body{
     /* Quick on the way out */
     transition: 0.15s;
 }
+#gdes-column{
+    transition-timing-function: ease-in;
+    /* Quick on the way out */
+    transition: 0.15s;
+    position: relative;
+    top: 120px;
+    margin-bottom: 80px;
+}
 
 .project-modal{
     margin: 30vw 20vw 30vw 20vw;
@@ -74,7 +82,7 @@ body{
     top: 0px;
 }
 
-.anim {
+/* .anim {
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -82,9 +90,152 @@ body{
     width: 100%;
     height: 100%;
     z-index: 1;
+} */
+
+/* WAVE ANIM */
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(40deg);
+	right: -50px;
 }
 
-.sphere-animation{
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .6;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: black;
+  width: 1300px;
+  height: 1200px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 20000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 50000ms infinite linear;
+	position: fixed;
+	background-color: white;
+}
+
+.wave.-one {
+  background: grey;
+}
+
+.wave.-two {
+  animation: drift 30000ms infinite linear;
+  opacity: .2;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: #25a7d7;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+
+/* .sphere-animation{
     transform-origin: 0% 0%;
     transform: scale(4.1)!important
 }
@@ -100,7 +251,9 @@ body{
     .sphere path {
         stroke-width: .4px;
     }
-}
+} */
+
+
 /* END ANIM STUFF */
 /* 
  _______             
@@ -288,6 +441,14 @@ body{
     top: 52px;
     left: 42px;
 }
+
+#github-btn{
+    background-color: #f5f5f5;
+}
+#artstation-btn{
+    background-color: black;
+}
+
 /* END LINKS */
 /* 
  ______ _            
@@ -299,27 +460,108 @@ body{
 */
 /* GRID GALLERY */
 
+.yt-vids{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.biglabel-one{
+    color: white;
+    right: 30%;
+    font-size: 18px;
+    position: absolute;
+}
+.biglabel-two{
+    color: white;
+    left: 30%;
+    font-size: 18px;
+    position: absolute;
+}
+.imglabel{
+    color: white;
+    text-align: center;
+}
+.gg-element-labeled{
+    margin-top: 30px;
+}
+
 #twitchFXbox{
-    position: relative;
     top: 515px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 30px;
+}
+#throwinshadebox{
+    top: 515px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+#mcasb-box{
+    top: 515px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 165px;
+}
+#mca-one{
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+#mca-two{
+    margin-left: 5px;
+    margin-bottom: 15px;
 }
 
 #tyro-icons{
     width: 525px;
     padding-top: 5px;
     padding-left: 5px;
-    transition: transform .2s; /* Animation */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#tyro-icons:hover > #tyro-icons-img{
+    transform: scale(1.7) translate(-34%, 0px); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     z-index: 50;
 }
-#tyro-icons:hover {
-    transform: scale(1.7) translate(-34%, 0px); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+#tyro-icons-img{
+    transition: transform .2s;
+}
+#shade-logo{
+    width: 525px;
+    padding-top: 5px;
+    padding-right: 5px;
+    transition: transform .2s; /* Animation */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#shade-logo:hover > #shade-logo-img{
+    transform: scale(1.4) translate(34%, 0px); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    z-index: 50;
+}
+#shade-logo-img{
+    transition: transform .2s;
+}
+@media (max-width:1220px){
+    #shade-logo:hover {
+        transform: scale(1.7); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        z-index: 50;
+    }
+    #tyro-icons:hover {
+        transform: scale(1.7); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        z-index: 50;
+    }
+    .yt-vids{
+        width: 70vw;
+        height: 38vw;
+    }
 }
 
 .illus-column{
     position: relative;
-    top: 505px;
+    top: 460px;
 }
 
 #illus{
@@ -328,7 +570,22 @@ body{
 	background-size: 400% 400%;
 	-webkit-animation: gradientBG 10s ease infinite;
 	        animation: gradientBG 10s ease infinite;
-    font-size: 20px;
+    font-size: 24px;
+}
+
+#gdes-word{
+    color: black;
+    background-color: white;
+    mix-blend-mode: screen;
+    font-size: 24px;
+}
+#gdes{
+    color: #000;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab );
+    width: 100%;
+	background-size: 400% 400%;
+	-webkit-animation: gradientBG 10s ease infinite;
+	        animation: gradientBG 10s ease infinite;
 }
 	
 @-webkit-keyframes gradientBG {
@@ -354,6 +611,14 @@ body{
 	}
 }
 
+.gg-box-gdes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-gap: 8px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 .gg-box{
     position: relative;
     top: 555px;
@@ -438,7 +703,7 @@ body{
     bottom: 50%;
 }
 @media (min-width:478px){
-    .gg-element:nth-child(3n+0){
+    .gg-element-rand:nth-child(3n+0){
         grid-row-end: span 2;
     }
 }
