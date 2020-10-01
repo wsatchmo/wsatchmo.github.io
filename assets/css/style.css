@@ -545,11 +545,11 @@ body{
     transition: transform .2s;
 }
 @media (max-width:1220px){
-    #shade-logo:hover {
+    #shade-logo:hover > #shade-logo-img {
         transform: scale(1.7); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         z-index: 50;
     }
-    #tyro-icons:hover {
+    #tyro-icons:hover > #tyro-icons-img {
         transform: scale(1.7); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         z-index: 50;
     }
