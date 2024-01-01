@@ -1,922 +1,1526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Will Satcher</title>
-    <meta name="description" content="Portfolio of Development & Design">
-    <meta name="keywords" content="Coding Programming Development Developer Dev Design Art Artstation Github Illustration Skill Work">
-    <meta name="author" content="Will Satcher">
-    <meta property="og:image" prefix="og: http://ogp.me/ns#" content="./assets/images/self-circular.webp">
-    <meta property="og:image:type" prefix="og: http://ogp.me/ns#" content="image/webp">
-    <meta property="og:image:width" prefix="og: http://ogp.me/ns#" content="1024">
-    <meta property="og:image:height" prefix="og: http://ogp.me/ns#" content="1024">
-    <link rel="shortcut icon" href="./favicon.ico">
-    <!-- CSS Styling -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <!-- Animate.css Styling -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- Modernizr for Feature Detecting [Loader] -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    <!-- Bulma Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <!-- Fomantic CDN -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-    <!-- Fontawesome Reference -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- Loader ~[MUST BE HERE FOR PROPER PRE-LOADING]~ -->
-    <!-- <script>
-        setInterval(function(){ $(".se-pre-con").fadeOut("slow"); }, 2800);
-    </script> -->
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Will Satcher - Graphic & Web Designer</title>
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="img/core-img/favicon.ico">
+
+    <!-- >>>>>>>>>>>>>>>> All CSS Files <<<<<<<<<<<<<<<< -->
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!--[if IE]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
 </head>
-<!--  
- __                            __         ___            __    __                     
-|  \                          |  \       /   \          |  \  |  \                    
-| $$  ______    ______    ____| $$      |  $$$\         | $$\ | $$  ______  __     __ 
-| $$ /      \  |      \  /      $$       \$$ $$__       | $$$\| $$ |      \|  \   /  \
-| $$|  $$$$$$\  \$$$$$$\|  $$$$$$$      | \$$$/  \      | $$$$\ $$  \$$$$$$\\$$\ /  $$
-| $$| $$  | $$ /      $$| $$  | $$      | $$\$$ $$      | $$\$$ $$ /      $$ \$$\  $$ 
-| $$| $$__/ $$|  $$$$$$$| $$__| $$      | $$_\$$\       | $$ \$$$$|  $$$$$$$  \$$ $$  
-| $$ \$$    $$ \$$    $$ \$$    $$       \$$  \$$\      | $$  \$$$ \$$    $$   \$$$   
- \$$  \$$$$$$   \$$$$$$$  \$$$$$$$        \$$$$ $$       \$$   \$$  \$$$$$$$    \$  
--->
-<body>
-    <!-- LOAD -->
-    <!-- <div class="se-pre-con"></div> -->
-    <!-- NAV -->
-    <div class="ui page grid" style="width: 100%; padding: 0%; border-radius: 0%;">
-        <div class="computer tablet only row">
-            <div class="ui inverted menu navbar" style="border-radius: 0%; height: 60px;">
-                <a id="name" class="brand item"><strong>Will Satcher</strong></a>
-                <a class="item modal-open" data-target="#about-modal">About</a>
-                <a class="ui dropdown inverted item">Projects
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://pixla.herokuapp.com')">Pixla</div>
-                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://wsatchmo.github.io/Wordcloud')">Wordcloud</div>
-                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://gentle-forest-73354.herokuapp.com/')">Booktionary</div>
-                        <div class="ui divider"></div>
-                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://github.com/wsatchmo')">Github</div>
-                        <div class="item" style="padding-right: .8em !important; padding-left: .8em !important;" onClick="parent.open('https://artstation.com/wsatcher')">Artstation</div>
-                    </div>
-                </a>
-                <div class="right menu">
-                    <a class="des des-only item">Designer</a>
-                    <a class="dev dev-only item">Developer</a>
-                    <a class="both active item">Mixed</a>
-                </div>
-            </div>
-        </div>
-        <!-- MOBILE ONLY -->
-        <div class="mobile only narrow row">
-            <div id="mini-nav" class="ui inverted navbar menu">
-                <a class="brand item">Will Satcher</a>
-                <a id="logo-box" class="item modal-open" onmouseenter="logoHover()" onclick="logoPop()" data-target="#about-modal">
-                    <img id="logo-satchmo" class="ui middle aligned mini spaced image" src="./assets/images/satchmo.webp" alt="Satchmo">
-                </a>
-                <div class="right menu open">
-                    <a id="collapse-button" href="" class="menu item navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" style="height: 100%;">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
-            </div>
-            <!-- COLLAPSE NAVBAR -->
-            <div id="nav-collapsed" class="ui vertical inverted navbar menu transition hidden" style="border-radius: 0%;">
-                <a class="item des des-only" style="border-radius: 0%;">Designer</a>
-                <a class="item dev dev-only">Developer</a>
-                <a class="active item both">Mixed</a>
-                <div class="ui item">
-                    <div class="text">Projects</div>
-                    <div class="menu">
-                        <a href="https://pixla.herokuapp.com" target="_blank" class="item">Pixla</a>
-                        <a href="https://wsatchmo.github.io/Wordcloud" target="_blank" class="item">Wordcloud</a>
-                        <a href="https://gentle-forest-73354.herokuapp.com/" target="_blank" class="item">Booktionary</a>
-                      </div>
-                </div>
-                <a href="https://github.com/wsatchmo" target="_blank" class="item">Github</a>
-                <a href="https://artstation.com/wsatcher" target="_blank" class="item">Artstation</a>
-            </div>
-        </div>
+
+<body class="gradient_version">
+    <!-- preloader start -->
+    <div id="preloader">
+        <span class="cssload-loader"><span class="cssload-loader-inner"></span></span>
     </div>
-    <!--END OF NAVBAR-->
-<!--   __                     
-      |  \                    
-  ____| $$  ______  __     __ 
- /      $$ /      \|  \   /  \
-|  $$$$$$$|  $$$$$$\\$$\ /  $$
-| $$  | $$| $$    $$ \$$\  $$ 
-| $$__| $$| $$$$$$$$  \$$ $$  
- \$$    $$ \$$     \   \$$$   
-  \$$$$$$$  \$$$$$$$    \$ 
--->
-    <!-- PROJECTS -->
-    <div class="container" style="z-index: 6; position: relative;">
-        <!-- MAIN THREE PROJECTS -->
-        <div id="dev-column" class="main-three">
-            <!-- PIXLA -->
-            <div class="column is-full"></div>
-            <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="pixla-img project-img modal-open" data-target="#pixla-modal" onmouseenter="pixlaHover()" style="position: relative; top: 50px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img id="pixla-img-logo" class="pixla-img-actual column column is-one-fifth is-one-fifth-mobile" src="./assets/images/pixlalogo.webp" style="flex-grow: 1"></img>
-                    <img id="pixla-img-pixla" class="pixla-text-actual column is-three-fifths is-three-fifths-mobile" src="./assets/images/pixla_text_light.webp" 
-                    style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
-                </div>
-                <div class="card modal-open" data-target="#pixla-modal">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                            <p class="title is-4 sel">Pixla</p>
-                            <p class="subtitle is-6 sel">Visual-centric social media</p>
-                            </div>
-                        </div>
-                
-                        <div class="content sel">
-                            Visual social media site linked to an SQL database for image sharing & commenting. 
-                            Utilizes Node.js with Express-Handlebars for routing and templating, 
-                            Bulma.io CDN, Okta Authorization, and the Pexels image API. 
-                            Deployed to Heroku with the JawsDB plugin for SQL.
-                        </div>
-                    </div>
-                </div>
-                <div class="buttons" style="margin-top: 1rem;">
-                    <button class="ui inverted button project-button" onClick="parent.open('https://pixla.herokuapp.com')">Deployed Site</button>
-                    <button class="ui inverted button secondary project-button" onClick="parent.open('https://github.com/wsatchmo/Pixla')" style="color: white;">Github Repo</button>
-                </div>
-            </div>
-            <!-- WORDCLOUD -->
-            <div id="scrollto" class="column is-full project-column"></div>
-            <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="wordcloud-img modal-open" data-target="#wordcloud-modal" onmouseenter="wordcloudHover()" style="position: relative; top: 30px; left: 65px; z-index: 7; display: inline-flex; align-items: center;">
-                    <img id="wordcloud-img-logo" class="wordcloud-img-actual column " src="./assets/images/wordcloud.webp" style="flex-grow: 1"></img>
-                </div>
-                <div class="card modal-open" data-target="#wordcloud-modal">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                            <p class="title is-4 sel">Wordcloud</p>
-                            <p class="subtitle is-6 sel">Cloud-based story writing</p>
-                            </div>
-                        </div>
-                
-                        <div class="content sel">
-                            Writing app with features meant to stir the imagination and help maintain flow.
-                            Word and image search conducted with BigHugeThesaurus and Pexels APIs. 
-                            Elements of Bootstrap and Materialize CDN. Linked to Firebase Real-Time 
-                            Database & Auth for automatic saving if logged in. Also makes use of Johann Burkard's Highlight plugin.
-                        </div>
-                    </div>
-                </div>
-                <div class="buttons" style="margin-top: 1rem;">
-                    <button class="ui inverted button project-button" onClick="parent.open('https://wsatchmo.github.io/Wordcloud')">Deployed Site</button>
-                    <button class="ui inverted button secondary project-button" onClick="parent.open('https://github.com/wsatchmo/Wordcloud')" style="color: white;">Github Repo</button>
-                </div>
-            </div>
-            <!-- BOOKTIONARY -->
-            <div class="column is-full project-column"></div>
-            <div class="column is-three-quarters is-three-quarters-mobile project-column" style="position: relative;">
-                <div class="booktionary-img modal-open" data-target="#booktionary-modal" onmouseenter="booktionaryHover()" style="position: relative; top: 40px; left: 65px; z-index: 7; display: inline-flex; align-items: center">
-                    <img id="booktionary-img-logo" class="booktionary-img-actual column is-one-fifth is-one-fifth-mobile" src="./assets/images/booktionary_logo.webp" style="flex-grow: 1"></img>
-                    <img id="booktionary-img-booktionary" class="booktionary-text-actual column is-three-fifths is-three-fifths-mobile" 
-                    src="./assets/images/booktionary_text.webp" style="position: relative; top: 1rem; z-index: 8; flex-grow: 3;"></img>
-                </div>
-                <div class="card modal-open" data-target="#booktionary-modal">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                            <p class="title is-4 sel">Booktionary</p>
-                            <p class="subtitle is-6 sel">React book search & save</p>
-                            </div>
-                        </div>
-                
-                        <div class="content sel">
-                            Book searching and saving app, pulling from the Google Books API as a resource.
-                            Full-Stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
-                            Uses Axios for React Router requests. Deployed to Heroku with the mLab plugin for MongoDB.
-                        </div>
-                    </div>
-                </div>
-                <div class="buttons" style="margin-top: 1rem;">
-                    <button class="ui inverted button project-button" onClick="parent.open('https://gentle-forest-73354.herokuapp.com/')">Deployed Site</button>
-                    <button class="ui inverted button secondary project-button" onClick="parent.open('https://github.com/wsatchmo/Booktionary')" style="color: white;">Github Repo</button>
-                </div>
-            </div>
-            <!-- END OF MAIN THREE PROJECTS -->
-        </div>
+    <!-- /.end preloader -->
+    <script type="text/javascript" src="java/FWDIGP.js"></script>
 
-<!-- 
-  /¯¯¯¯/|¯¯¯¯|  |¯¯¯¯|\¯¯¯¯\   /¯¯¯¯/\¯¯¯¯\'/¯¯¯¯/|¯¯¯¯|‘ 
-'|.::.| |____|  |..::| |   |'  \____\_¯¯¯¯‘\___ '\|____|  
-'|.:::| \¯¯¯¯\' |::. | |   |'  /¯¯¯¯/¯____‘|¯¯¯¯|\  ¯¯¯\' 
-|\____\/____/|  |____|/____/|°|\____\/____/||____|/____/| 
-|'|;;;;;;;;;'|'|  |;;;;;;;;;| |°| |;;;;;;;|'|;;;;;;;;'|'| 
-\|_________|/° |________ |/  '\|________ '|/|_________|/ 
--->
+    <!-- >>>>>>>>>>>>>>>> Header Start <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <header class="header_area">
+        <!-- Header Area Start -->
+        <div class="main_header_area animated">
+            <div class="container">
+                <div class="row">
 
-        <div id="gdes-column">
-            <div class="column is-full gdes-inner-column">
-                <div class="card" style="background-color: rgba(0, 0, 0, 0);">
-                    <div class="card-content" style="margin-bottom: 100px;">
-                        <div class="media">
-                            <div class="media-content">
-                                <header id="gdes" class="card-header" style="background-color: white;">
-                                    <p id="gdes-word" class="card-header-title is-centered sel">Graphic Design</p>
-                                </header>
+                    <div class="col-sm-2 col-xs-9">
+                        <!-- Logo Area -->
+                        <div class="logo_area">
+                            <img class="logo" src="img/core-img/logo.webp">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-10 col-xs-12">
+                        <!-- Menu Area Start -->
+                        <div class="main_menu_area">
+                            <div class="mainmenu">
+                                <nav>
+                                    <ul id="nav">
+                                        <li class="current_page_item"><a href="#home">Home</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#service">Web Design</a></li>
+                                        <li><a href="#work">Graphic Design</a></li>
+                                        <li><a href="#advisor">Product Photography</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="throwinshadebox">
-                <div id="shade-logo">
-                    <img id="shade-logo-img" src="./assets/images/illustrations/Throwin_Shade.webp" alt="Throwin Shade Logo">
-                </div>
-                <p class="biglabel-one" style="margin-top: -5px;">Throwin Shade Video Loop</p>
-                <iframe class="yt-vids" width="560" height="315" src="https://www.youtube.com/embed/_o8mDyBv3Zc" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div id="twitchFXbox">
-                <p class="biglabel-two" style="margin-top: 15px;">Tyro Video & Stream Assets</p>
-                <iframe class="yt-vids" width="560" height="315" src="https://www.youtube.com/embed/XfL7sYM-Jow" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div id="tyro-icons">
-                    <img id="tyro-icons-img" src="./assets/images/illustrations/twitch_example.webp" alt="Tyro Twitch Examples">
-                </div>
-            </div>
-            <div class="gg-box-gdes" style="padding-bottom: 70px;">
-                <div class="gg-element gg-element-labeled">
-                    <img src="./assets/images/illustrations/Tyro_Twitch_icons.webp">
-                    <p class="imglabel">Tyro Music - Twitch Graphic Assets</p>
-                </div>
-                <div class="gg-element gg-element-labeled">
-                    <img src="./assets/images/illustrations/rtl_sqr.webp">
-                    <p class="imglabel">Rose Town Legends - Style Guide</p>
-                </div>
-                <div class="gg-element gg-element-labeled">
-                    <img src="./assets/images/illustrations/blvd_catalog.webp">
-                    <p class="imglabel">BLVD & Protec - Product Catalogs</p>
-                </div>
-                <div class="gg-element gg-element-labeled">
-                    <img src="./assets/images/illustrations/westedge.webp">
-                    <p class="imglabel">West Edge Design Fair - Press Ad</p>
-                </div>
-            </div>
-            <div id="mcasb-box">
-                <iframe id="mca-one" width="560" height="315" src="https://www.youtube.com/embed/aD4HC20z4t0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe id="mca-two" width="560" height="315" src="https://www.youtube.com/embed/sY2vdOUQtE4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-
-
-<!--         
- __  __            __                 
-|  \|  \          |  \                
-| $$ \$$ _______  | $$   __   _______ 
-| $$|  \|       \ | $$  /  \ /       \
-| $$| $$| $$$$$$$\| $$_/  $$|  $$$$$$$
-| $$| $$| $$  | $$| $$   $$  \$$    \ 
-| $$| $$| $$  | $$| $$$$$$\  _\$$$$$$\
-| $$| $$| $$  | $$| $$  \$$\|       $$
- \$$ \$$ \$$   \$$ \$$   \$$ \$$$$$$$
--->
-        <!-- BUTTONS -->
-        <div class="link-buttons is-vcentered" style="display: flex; justify-content: center;">
-            <div class="link-buttons-inner">
-                <svg class="linksvg" viewBox="0 0 320 300">
-                    <defs>
-                        <linearGradient
-                            inkscape:collect="always"
-                            id="linearGradient"
-                            x1="13"
-                            y1="193.49992"
-                            x2="307"
-                            y2="193.49992"
-                            gradientUnits="userSpaceOnUse">
-                        <stop
-                            style="stop-color:#ff00ff;"
-                            offset="0"
-                            id="stop876" />
-                        <stop
-                            style="stop-color:#ff0000;"
-                            offset="1"
-                            id="stop878" />
-                        </linearGradient>
-                    </defs>
-                    <path class="linkpath" d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 
-                    -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
-                </svg>
-                <div class="form link-buttons-form">
-                    <button id="github-btn" onClick="parent.open('https://github.com/wsatchmo')" class="button is-light is-medium is-rounded github link-button">
-                        <span class="icon is-medium">
-                            <img src="./assets/images/github_icon.webp"></img>
-                        </span>
-                        <span>Github</span>
-                    </button>
-                    <button id="artstation-btn" onClick="parent.open('https://artstation.com/wsatcher')" class="button is-dark is-medium is-rounded artstation link-button">
-                        <span class="icon is-medium">
-                            <img src="./assets/images/artstation_icon.webp"></img>
-                        </span>
-                        <span>Artstation</span>
-                    </button>
                 </div>
             </div>
         </div>
-        <!-- END OF BUTTONS -->
-<!-- 
-       __                     
-      |  \                    
-  ____| $$  ______    _______ 
- /      $$ /      \  /       \
-|  $$$$$$$|  $$$$$$\|  $$$$$$$
-| $$  | $$| $$    $$ \$$    \ 
-| $$__| $$| $$$$$$$$ _\$$$$$$\
- \$$    $$ \$$     \|       $$
-  \$$$$$$$  \$$$$$$$ \$$$$$$$
--->
-        <!-- IMAGES -->
-        <div id="des-column">
-            <div class="column is-full illus-column">
-                <div class="card" style="background-color: rgba(0, 0, 0, 0);">
-                    <div class="card-content des-dev-divide" >
-                        <div class="media">
-                            <div class="media-content">
-                                <header class="card-header" style="background-color: white;">
-                                    <p id="illus" class="card-header-title is-centered sel">Illustration & 3D</p>
-                                </header>
-                            </div>
+    </header>
+    <!-- >>>>>>>>>>>>>>>> Header End <<<<<<<<<<<<<<<< -->
+
+    <!-- >>>>>>>>>>>>>>>> Welcome Area Start <<<<<<<<<<<<<<<< -->
+    <section class="welcome_area" id="home">
+            <div class="single_slide">
+                <video class="drone_video" playsinline autoplay loop muted>
+                    <source src="img/vid/drone-flying_small.mp4" type="video/mp4" /> 
+                </video>
+                <div class="slide_text">
+                    <div class="table">
+                        <div class="table_cell">
+                            <h2>Will Satcher</h2>
+                            <h3>Graphic & Web Designer.</h3>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="gg-screen"></div>
-            <div class="gg-box" style="padding-bottom: 70px;">
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/isoliph.webp">
+   
+    </section>
+    <div class="clearfix"></div>
+    <!-- >>>>>>>>>>>>>>>>>> Welcome Area End <<<<<<<<<<<<<<<< -->
+
+    <!-- >>>>>>>>>>>>>>>>>> Special Feature Area Start <<<<<<<<<<<<<<<< -->
+    <section class="special_feature_area section_padding_100">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-6 col-md-3">
+                    <!-- Single Feature Area Start -->
+                    <div class="single_feature wow fadeInUp" data-wow-delay=".2s">
+                        <a href="#work">
+                            <div class="feature_img">
+                                <i class="icofont icofont-paint"></i>
+                            </div>
+                            <!-- Single Feature Image Area End -->
+                            <div class="feature_text">
+                                <h4>Illustration</h4>
+                                <p>Life long artist and Graduate with a B.A. in Studio Art specializing in quick pencil & paper sketches as well as digital illustration.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Aston_Final_close2.webp">
+
+                <div class="col-sm-6 col-md-3">
+                    <!-- Single Feature Area Start -->
+                    <div class="single_feature wow fadeInUp" data-wow-delay=".4s">
+                        <a href="#service">
+                            <div class="feature_img">
+                                <i class="icofont icofont-dashboard-web"></i>
+                            </div>
+                            <!-- Single Feature Image Area End -->
+                            <div class="feature_text"> 
+                                <h4>Web Design</h4>
+                                <p>Full-Stack MERN developer with experience in backend programming & webmastering. Especially proficient with Javascript.</p>                              
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Aston_Final_punched.webp">
+
+                <div class="col-sm-6 col-md-3">
+                    <!-- Single Feature Area Start -->
+                    <div class="single_feature wow fadeInUp" data-wow-delay=".6s">
+                        <a href="#work">
+                            <div class="feature_img">
+                                <i class="icofont icofont-image"></i>
+                            </div>
+                            <!-- Single Feature Image Area End -->
+                            <div class="feature_text">
+                                <h4>Graphic Design</h4>
+                                <p>Extensive experience in graphic design both print & digital, including logos, packaging, magazine layout, social media, & brand design.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Battle_Top.webp">
+
+                <div class="col-sm-6 col-md-3">
+                    <!-- Single Feature Area Start -->
+                    <div class="single_feature wow fadeInUp" data-wow-delay=".8s">
+                        <a href="#video">
+                            <div class="feature_img">
+                                <i class="icofont icofont-camera"></i>
+                            </div>
+                            <!-- Single Feature Image Area End -->
+                            <div class="feature_text">
+                                <h4>Video & Photo</h4>
+                                <p>Massive catalogue of product photography & editing/retouching. Proficient in Adobe Creative Suite, Final Cut, DSLR cameras & Drones.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Tyro_Pitkid.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Solumn_Basic.webp">
-                </div>                
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/arctic.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/califires.webp">
-                </div>                
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Sil_Qassana.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/OROSHI_Grandpa_draw.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/VIVI_bkgrnd.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/VIVI_fin_angle.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/VIVI_toon.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/vivi_light_diff_ao_norm.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Self1.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/The_Last_Watcher_Flat_insta.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/EGG1.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Pilot_Matte_White_Front.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/pilot_back.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/pilot_angle.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Pilot_real_front.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/Samuraiflat.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/malik_zero.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/malik_drifter.webp">
-                </div>
-                <div class="gg-element gg-element-rand">
-                    <img src="./assets/images/illustrations/NunoftheScourge.37.webp">
-                </div>
-                <!-- <div class="gg-element">
-                    <img src="./assets/images/illustrations/Shogunflat.webp">
-                </div> -->
             </div>
         </div>
-    </div>
-    <!-- END OF PROJECTS -->
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Special Feature Area End <<<<<<<<<<<<<<<< -->
+
+    <!-- >>>>>>>>>>>>>>>> About Us Area Start <<<<<<<<<<<<<<<< -->
+    <section class="about_area section_padding_100" id="about">
+        <div class="container">
+            <div class="about_us_area">
+                <div class="row">
+                    <!-- About Us Area -->
+                    <div class="col-xs-12 col-md-6">
+                        <div class="about_us_thumb wow fadeInRight" data-wow-delay="0.2s">
+                            <img src="img/about-me.webp" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 wow fadeInUp">
+                        <!-- About Us Text Start -->
+                        <div class="about_us_text text-right">
+                            <h3>About me</h3>
+                            <p>I am a graphic & web designer with clients ranging from the architectural sector to the United States Census Office. I specialize in graphic & 
+                                layout design, product photography, copy, video, and illustration - but also have experience with 3D, animation, sound design, and much more. 
+                                In college, I worked with every material from data to concrete, from drawing and painting to film. I enjoy tinkering with the details as well as
+                                painting a big picture; I've been tapped for singular projects like logos, but have also acted as the sole artist at a multinational instrument case 
+                                manufacturing company.</p>
+                            <p>Put simply, if you need something created, I can create it. Contact me so we can get started on your project, or crafting your comprehensive brand identity.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Awesome Feature Area End <<<<<<<<<<<<<<<< -->
     
-    <!-- COLOR CHANGE ANIMATION -->
-    <div id="pop" style="max-width: 100%;">
-        <canvas id="canvas"></canvas>
-    </div>
-    <div class="box">
-        <div class='wave -one'></div>
-        <div class='wave -two'></div>
-        <div class='wave -three'></div>
-    </div>
-<!-- 
-    ____
-    .X+.   .
-  .Xx+-.     .
-  XXx++-..          SPHERE  球
-  XXxx++--..        ANIM  一芸
-  `XXXxx+++--'
-    `XXXxxx'
-       ""   
+    <!-- >>>>>>>>>>>>>>>> Our Speciality Area Start <<<<<<<<<<<<<<<< -->
+    <section class="our_speciality_area section_padding_100" data-stellar-background-ratio="0.6">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
 
-    <div class="anim">
-        <div class="sphere-animation" style="height: 100%; width: 100%;">
-            <svg class="sphere" height="100%" width="100%" stroke="rgba(80,80,80,.35)">
-                <defs>
-                    <linearGradient id="sphereGradient" x1="5%" x2="5%" y1="0%" y2="15%">
-                        <stop stop-color="#373734" offset="0%"/>
-                        <stop stop-color="#242423" offset="50%"/>
-                        <stop stop-color="#0D0D0C" offset="100%"/>
-                    </linearGradient>
-                </defs>
-                <path d="M361.604 361.238c-24.407 24.408-51.119 37.27-59.662 28.727-8.542-8.543 4.319-35.255 28.726-59.663 24.408-24.407 51.12-37.269 59.663-28.726 8.542 8.543-4.319 35.255-28.727 59.662z"/>
-                <path d="M360.72 360.354c-35.879 35.88-75.254 54.677-87.946 41.985-12.692-12.692 6.105-52.067 41.985-87.947 35.879-35.879 75.254-54.676 87.946-41.984 12.692 12.692-6.105 52.067-41.984 87.946z"/>
-                <path d="M357.185 356.819c-44.91 44.91-94.376 68.258-110.485 52.149-16.11-16.11 7.238-65.575 52.149-110.485 44.91-44.91 94.376-68.259 110.485-52.15 16.11 16.11-7.239 65.576-52.149 110.486z"/>
-                <path d="M350.998 350.632c-53.21 53.209-111.579 81.107-130.373 62.313-18.794-18.793 9.105-77.163 62.314-130.372 53.209-53.21 111.579-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z"/>
-                <path d="M343.043 342.677c-59.8 59.799-125.292 91.26-146.283 70.268-20.99-20.99 10.47-86.483 70.269-146.282 59.799-59.8 125.292-91.26 146.283-70.269 20.99 20.99-10.47 86.484-70.27 146.283z"/>
-                <path d="M334.646 334.28c-65.169 65.169-136.697 99.3-159.762 76.235-23.065-23.066 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z"/>
-                <path d="M324.923 324.557c-69.806 69.806-146.38 106.411-171.031 81.76-24.652-24.652 11.953-101.226 81.759-171.032 69.806-69.806 146.38-106.411 171.031-81.76 24.652 24.653-11.953 101.226-81.759 171.032z"/>
-                <path d="M312.99 312.625c-73.222 73.223-153.555 111.609-179.428 85.736-25.872-25.872 12.514-106.205 85.737-179.428s153.556-111.609 179.429-85.737c25.872 25.873-12.514 106.205-85.737 179.429z"/>
-                <path d="M300.175 299.808c-75.909 75.909-159.11 115.778-185.837 89.052-26.726-26.727 13.143-109.929 89.051-185.837 75.908-75.908 159.11-115.778 185.837-89.051 26.726 26.726-13.143 109.928-89.051 185.836z"/>
-                <path d="M284.707 284.34c-77.617 77.617-162.303 118.773-189.152 91.924-26.848-26.848 14.308-111.534 91.924-189.15C265.096 109.496 349.782 68.34 376.63 95.188c26.849 26.849-14.307 111.535-91.923 189.151z"/>
-                <path d="M269.239 267.989c-78.105 78.104-163.187 119.656-190.035 92.807-26.849-26.848 14.703-111.93 92.807-190.035 78.105-78.104 163.187-119.656 190.035-92.807 26.849 26.848-14.703 111.93-92.807 190.035z"/>
-                <path d="M252.887 252.52C175.27 330.138 90.584 371.294 63.736 344.446 36.887 317.596 78.043 232.91 155.66 155.293 233.276 77.677 317.962 36.521 344.81 63.37c26.85 26.848-14.307 111.534-91.923 189.15z"/>
-                <path d="M236.977 236.61C161.069 312.52 77.867 352.389 51.14 325.663c-26.726-26.727 13.143-109.928 89.052-185.837 75.908-75.908 159.11-115.777 185.836-89.05 26.727 26.726-13.143 109.928-89.051 185.836z"/>
-                <path d="M221.067 220.7C147.844 293.925 67.51 332.31 41.639 306.439c-25.873-25.873 12.513-106.206 85.736-179.429C200.6 53.786 280.931 15.4 306.804 41.272c25.872 25.873-12.514 106.206-85.737 179.429z"/>
-                <path d="M205.157 204.79c-69.806 69.807-146.38 106.412-171.031 81.76-24.652-24.652 11.953-101.225 81.759-171.031 69.806-69.807 146.38-106.411 171.031-81.76 24.652 24.652-11.953 101.226-81.759 171.032z"/>
-                <path d="M189.247 188.881c-65.169 65.169-136.696 99.3-159.762 76.235-23.065-23.065 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z"/>
-                <path d="M173.337 172.971c-59.799 59.8-125.292 91.26-146.282 70.269-20.991-20.99 10.47-86.484 70.268-146.283 59.8-59.799 125.292-91.26 146.283-70.269 20.99 20.991-10.47 86.484-70.269 146.283z"/>
-                <path d="M157.427 157.061c-53.209 53.21-111.578 81.108-130.372 62.314-18.794-18.794 9.104-77.164 62.313-130.373 53.21-53.209 111.58-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z"/>
-                <path d="M141.517 141.151c-44.91 44.91-94.376 68.259-110.485 52.15-16.11-16.11 7.239-65.576 52.15-110.486 44.91-44.91 94.375-68.258 110.485-52.15 16.109 16.11-7.24 65.576-52.15 110.486z"/>
-                <path d="M125.608 125.241c-35.88 35.88-75.255 54.677-87.947 41.985-12.692-12.692 6.105-52.067 41.985-87.947C115.525 43.4 154.9 24.603 167.592 37.295c12.692 12.692-6.105 52.067-41.984 87.946z"/>
-                <path d="M109.698 109.332c-24.408 24.407-51.12 37.268-59.663 28.726-8.542-8.543 4.319-35.255 28.727-59.662 24.407-24.408 51.12-37.27 59.662-28.727 8.543 8.543-4.319 35.255-28.726 59.663z"/>
-            </svg>
+                        <div class="col-xs-12">
+                            <!-- Section Heading Start -->
+                            <div class="section_heading">
+                                <p>My Specialties</p>
+                                <h4>Skills & Softwares</h4>
+                            </div>
+                            <!-- Section Heading End -->
+                        </div>
+
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Graphic Design</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Illustration</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Logo Design</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Photography & Videography</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Video & Photo Editing</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>HTML, CSS, MERN Stack</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Adobe Creative Suite</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Animation & 3D</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Speciality Area Start -->
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="single_speciality">
+                                <div class="single_speciality_icon">
+                                    <i class="icofont icofont-ui-check"></i>
+                                </div>
+                                <div class="single_speciality_text">
+                                    <h5>Sound Design</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
--->
+        <!-- end. container -->
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Our Speciality Area End <<<<<<<<<<<<<<<< -->
 
-    <!-- FOOTER   -->
-    <footer class="footer" id="foot">
-        <div class="container is-fluid">
-            <div class="content has-text-centered" style="margin-bottom: 5px;">
-                <p style="margin-top: 10px;">
-                    <a class="footlink" href="https://github.com/wsatchmo" target="_blank" style="padding-bottom: 2%;">&#x00A9 Will Satcher <span id="year"></span></a>
-                    <i class="fas fa-code" style="color: #666;"></i>
-                    <i class="fas fa-palette" style="color: #666;"></i>
-                </p>
+    <!-- >>>>>>>>>>>>>>>> Our Services Area Start <<<<<<<<<<<<<<<< -->
+    <section class="what_we_do_area section_padding_100_70" id="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- Section Heading Start -->
+                    <div class="section_heading">
+                        <p>Apps & Web Work</p>
+                        <h3>Web Design</h3>
+                    </div>
+                    <!-- Section Heading End -->
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Single Service Area Start -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="single_service wow fadeInUp" data-wow-delay=".2s">
+                        <!-- Single Service image -->
+                        <div class="single_service_img">
+                            <img src="img/web-img/cloud.webp" alt="">
+                        </div>
+                        <!-- Single Service title -->
+                        <div class="single_service_title">
+                            <h4>Wordcloud</h4>
+                        </div>
+                        <!-- Single Service content -->
+                        <div class="single_service_content">
+                            <div class="table">
+                                <div class="table_cell">
+                                    <p>Writing app with features meant to stir the imagination and help maintain flow.
+                                        Word and image search conducted with BigHugeThesaurus and Pexels APIs. 
+                                        Elements of Bootstrap and Materialize CDN. Linked to Firebase Real-Time 
+                                        Database & Auth for automatic saving if logged in. Also makes use of Johann Burkard's Highlight plugin.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learn_more">
+                            <a href="https://wsatchmo.github.io/Wordcloud/" target="_blank"><h4>Visit Site</h4></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service Area Start -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="single_service wow fadeInUp" data-wow-delay=".4s">
+                        <!-- Single Service image -->
+                        <div class="single_service_img">
+                            <img src="img/web-img/pixlalogo.webp" alt="">
+                        </div>
+                        <!-- Single Service title -->
+                        <div class="single_service_title">
+                            <h4>Pixla</h4>
+                        </div>
+                        <!-- Single Service content -->
+                        <div class="single_service_content">
+                            <div class="table">
+                                <div class="table_cell">
+                                    <p>Visual social media site linked to an SQL database for image sharing & commenting. 
+                                        Utilizes Node.js with Express-Handlebars for routing and templating, 
+                                        Bulma.io CDN, Okta Authorization, and the Pexels image API. 
+                                        Deployed to Heroku with the JawsDB plugin for SQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learn_more">
+                            <a href="https://github.com/wsatchmo/Pixla" target="_blank"><h4>Github Repository</h4></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service Area Start -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="single_service wow fadeInUp" data-wow-delay=".6s">
+                        <!-- Single Service image -->
+                        <div class="single_service_img">
+                            <img src="img/web-img/booktionary_logo.webp" alt="">
+                        </div>
+                        <!-- Single Service title -->
+                        <div class="single_service_title">
+                            <h4>Booktionary</h4>
+                        </div>
+                        <!-- Single Service content -->
+                        <div class="single_service_content">
+                            <div class="table">
+                                <div class="table_cell">
+                                    <p>Book searching and saving app, pulling from the Google Books API as a resource.
+                                        Full-Stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
+                                        Uses Axios for React Router requests. Deployed to Heroku with the mLab plugin for MongoDB.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learn_more">
+                            <a href="https://github.com/wsatchmo/Booktionary" target="_blank"><h4>Github Repository</h4></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service Area Start -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="single_service wow fadeInUp" data-wow-delay=".8s">
+                        <!-- Single Service image -->
+                        <div class="single_service_img">
+                            <img src="img/web-img/protec_logo.webp" alt="">
+                        </div>
+                        <!-- Single Service title -->
+                        <div class="single_service_title">
+                            <h4>Protec Instruments</h4>
+                        </div>
+                        <!-- Single Service content -->
+                        <div class="single_service_content">
+                            <div class="table">
+                                <div class="table_cell">
+                                    <p>Website for Protec, displaying all company products. Graphic design and webmastering using Salesforce, Oracle Netsuite and Volusion.
+                                        Facilitating and modifying CRM and ERP sales tactics and solutions, and using built-in analytic tools as well as Google Analytics. 
+                                        Database upkeep using SQL. Ensured database of products corresponded with database on Amazon. Also worked with Amazon seller backend.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learn_more">
+                            <a href="https://www.protecstyle.com/" target="_blank"><h4>Visit Site</h4></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service Area Start -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
+                        <!-- Single Service image -->
+                        <div class="single_service_img">
+                            <img src="img/web-img/vue.webp" alt="">
+                        </div>
+                        <!-- Single Service title -->
+                        <div class="single_service_title">
+                            <h4>Vue Science Test</h4>
+                        </div>
+                        <!-- Single Service content -->
+                        <div class="single_service_content">
+                            <div class="table">
+                                <div class="table_cell">
+                                    <p>A simple science test project built using the Vue Framework and Bootstrap-Vue CDN.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learn_more">
+                            <a href="https://wsatchmo.github.io/Vue_ScienceTest/" target="_blank"><h4>Visit Site</h4></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service Area Start -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="single_service wow fadeInUp" data-wow-delay="1.2s">
+                        <!-- Single Service image -->
+                        <div class="single_service_img">
+                            <img src="img/web-img/crystal.webp" alt="">
+                        </div>
+                        <!-- Single Service title -->
+                        <div class="single_service_title">
+                            <h4>Crystal Collector</h4>
+                        </div>
+                        <!-- Single Service content -->
+                        <div class="single_service_content">
+                            <div class="table">
+                                <div class="table_cell">
+                                    <p>A math game with extensive logic built using Javascript as well as basic HTML & CSS. Collect crystals for the King - but don't take too many!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learn_more">
+                            <a href="https://wsatchmo.github.io/Crystal_Collector_game/" target="_blank"><h4>Visit Site</h4></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Our Services Area End <<<<<<<<<<<<<<<< -->
+
+    <!-- >>>>>>>>>>>>>>>> Works Details area start <<<<<<<<<<<<<<<< -->
+    <div id="works_details_wrapper">
+        <!-- Modal-box -->
+        <div role="dialog" tabindex="-1" id="works_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/catalogs.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Magazine Design for BLVD & Protec.</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Print. Interior & exterior created with Adobe Photoshop, Illustrator, & InDesign.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Westedge -->
+        <div role="dialog" tabindex="-1" id="westedge_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/westedge.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Graphic Design For Westedge Fair</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Print & Web. Email blast, Flyer, & Magazine page created with Adobe Illustrator & Photoshop.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Shade -->
+        <div role="dialog" tabindex="-1" id="shade_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/throwinshadelogo.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Logo Design for Throwin Shade</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Print & Web. Prototyped via sketching, created with Adobe Illustrator & Photoshop.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JJ's -->
+        <div role="dialog" tabindex="-1" id="jj_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/jjslogo.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Logo Design for JJ's Cleaning Co</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Print & Web. Prototyped via sketching, created with Adobe Illustrator & Photoshop.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tyro VFX -->
+        <div role="dialog" tabindex="-1" id="tyro_fx_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/tyroanims.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Tyro VFX Overlays</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Video assets created with Adobe After Effects for use on Twitch.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tyro Icons -->
+        <div role="dialog" tabindex="-1" id="tyro_icons_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/tyrotwitchassets.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Tyro Icons & Badges</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Badges, buttons & icons created with Adobe Photoshop & Pixelmator for use on Twitch.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Oroshi Modal -->
+        <div role="dialog" tabindex="-1" id="oroshi_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/oroshigpa.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Oroshi Grandpa</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Pen & paper. Sketched & lined, then cleaned & lightened on Photoshop.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blue Witch Modal -->
+        <div role="dialog" tabindex="-1" id="bluewitch_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/bluewitch.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Blue Witch</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Pen & paper. Sketched & lined, then cleaned & lightened on Photoshop.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Clarinet Modal -->
+        <div role="dialog" tabindex="-1" id="clarinet_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/96.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Clara Chibi</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Sketched, then created in Adobe Illustrator. Used on limited-print T-shirts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Flute Modal -->
+        <div role="dialog" tabindex="-1" id="flute_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/97.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Flula Chibi</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Sketched, then created in Adobe Illustrator. Used on limited-print T-shirts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Viola  Modal -->
+        <div role="dialog" tabindex="-1" id="viola_details" class="modal fade in">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal Head start -->
+                    <div class="modal_head">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><i class="icofont icofont-close"></i></button>
+                    </div>
+                    <!-- modal body start -->
+                    <div class="modal_body">
+                        <!-- single gallery description start -->
+                        <section class="single_gallery_area">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <!--  Gallery Slider -->
+                                        <div class="single_gallary_slider">
+                                            <div class="single_slider">
+                                                <img src="img/gallery/98.webp" alt="">
+                                            </div>
+                                        </div>
+                                        <!--  Gallery Details Info -->
+                                        <div class="single_gallery_item_info">
+                                            <!-- Headline -->
+                                            <div class="headline">
+                                                <h4>Viola Chibi</h4>
+                                            </div>
+                                            <!--  Description -->
+                                            <div class="description">
+                                                <p>Sketched, then created in Adobe Illustrator. Used on limited-print T-shirts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- >>>>>>>>>>>>>>>> Works Details area end <<<<<<<<<<<<<<<< -->
+
+    <!-- >>>>>>>>>>>>>>>> Project area start <<<<<<<<<<<<<<<< -->
+    <section class="gallery_area section_padding_100 clearfix" id="work">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- Section Heading Start -->
+                    <div class="section_heading">
+                        <p>Illustrations, Layouts, Photo-Edting; Print & Digital </p>
+                        <h3>Graphic Design</h3>
+                    </div>
+                    <!-- Section Heading End -->
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery_full_width_images_area clearfix">
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="0.2s">
+                <a data-target="#works_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/catalogs.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>BLVD & Protec Magazines</h5>
+                                    <p>Graphic & Print Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay=".4s">
+                <a data-target="#westedge_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/westedge.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Westedge Design Fair 
+                                        <br> Flyer / Email Blast</h5>
+                                    <p>Graphic Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay=".6s">
+                <a data-target="#shade_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/throwinshadelogo.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Throwin' Shade Installations</h5>
+                                    <p>Logo Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="1.2s">
+                <a data-target="#jj_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/jjslogo.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>JJ's Cleaning Co.</h5>
+                                    <p>Logo Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay=".8s">
+                <a data-target="#tyro_fx_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/tyroanims.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Tyro Music Twitch Overlays</h5>
+                                    <p>Animation & Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="1s">
+                <a data-target="#tyro_icons_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/tyrotwitchassets.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Tyro Music Badges & Icons</h5>
+                                    <p>Graphic & Brand Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="1s">
+                <a data-target="#oroshi_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/oroshigpa.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Oroshi Grandpa</h5>
+                                    <p>Illustration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="1s">
+                <a data-target="#bluewitch_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/bluewitch.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Blue Witch</h5>
+                                    <p>Illustration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="1.4s">
+                <a data-target="#clarinet_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/96.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Protec Clara Chibi</h5>
+                                    <p>Illustation & Graphic Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="1.6s">
+                <a data-target="#flute_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/97.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Protec Flula Chibi</h5>
+                                    <p>Illustation & Graphic Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Single gallery Item Start -->
+            <div class="single_gallery_item wow fadeInUp" data-wow-delay="1.6s">
+                <a data-target="#viola_details" data-toggle="modal" href="#">
+                    <img src="img/gallery/98.webp" alt="">
+                    <!-- Single gallery Item hover caption -->
+                    <div class="hover_overlay">
+                        <div class="table">
+                            <div class="table_cell">
+                                <div class="gallery_info">
+                                    <h5>Protec Viola Chibi</h5>
+                                    <p>Illustation & Graphic Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Project area end <<<<<<<<<<<<<<<< -->
+    
+    <!-- >>>>>>>>>>>>>>>> Video Area Start <<<<<<<<<<<<<<<< -->
+    <section class="blog_area section_padding_100_70" id="video">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- Section Heading Start -->
+                    <div class="section_heading">
+                        <p>Production & Editing</p>
+                        <h3>Videos</h3>
+                    </div>
+                    <!-- Section Heading End -->
+                </div>
+            </div>
+            <div class="row">
+
+                <!-- single latest news area start -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single_latest_news_area wow fadeInUp" data-wow-delay=".2s">
+                        <!-- single latest news thumb -->
+                        <div class="single_latest_news_img_area">
+                            <iframe id="shade-vid" src="https://www.youtube.com/embed/_o8mDyBv3Zc" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- single latest news published date -->
+                        </div>
+                        <div class="single_latest_news_text_area">
+                            <!-- single latest news title -->
+                            <div class="news_title">
+                               <h4>Throwin' Shade Loop</h4>
+                            </div>
+                            <!-- single latest news excerp -->
+                            <div class="news_content">
+                                <p>Footage recorded with DJI Mini drone. Edited using Adobe Premiere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single latest news area start -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single_latest_news_area wow fadeInUp" data-wow-delay=".4s">
+                        <!-- single latest news thumb -->
+                        <div class="single_latest_news_img_area">
+                            <iframe id="mca-one" src="https://www.youtube.com/embed/aD4HC20z4t0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- single latest news published date -->
+                        </div>
+                        <div class="single_latest_news_text_area">
+                            <!-- single latest news title -->
+                            <div class="news_title">
+                                <h4>MCASB On Edge Festival</h4>
+                            </div>
+                            <!-- single latest news excerp -->
+                            <div class="news_content">
+                                <p>Most footage recorded using Nikon DSLR. Edited using Adobe Premiere & Ableton Live.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single latest news area start -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="single_latest_news_area wow fadeInUp" data-wow-delay=".6s">
+                        <!-- single latest news thumb -->
+                        <div class="single_latest_news_img_area">
+                            <iframe id="mca-two" src="https://www.youtube.com/embed/sY2vdOUQtE4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- single latest news published date -->
+                        </div>
+                        <div class="single_latest_news_text_area">
+                            <!-- single latest news title -->
+                            <div class="news_title">
+                               <h4>MCASB Teen Arts Counsel</h4>
+                            </div>
+                            <!-- single latest news excerp -->
+                            <div class="news_content">
+                                <p>Recorded using Nikon DSLR & personal iPhones. Edited using Finalcut Pro X.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Video Area End <<<<<<<<<<<<<<<< -->
+
+    <!-- >>>>>>>>>>>>>>>> Photography <<<<<<<<<<<<<<<< -->
+    <section class="our_advisor_area clearfix section_padding_100" id="advisor">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- Section Heading Start -->
+                    <div class="section_heading">
+                        <p>DSLR Photography & Photo-Editing</p>
+                        <h3>Product Photography</h3>
+                    </div>
+                    <!-- Section Heading End -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            
+            <!-- grid holder -->
+            <div id="myDiv"></div>
+                    
+            <!-- playlist -->
+            <div id="myPlaylist" style="display:none">
+                <ul data-category-name="Category 1 (image gallery)">
+                    <li data-thumbnail-path="content/media/thumbnails/1.jpg" data-url="content/media/images/1.jpg" ></li>
+                    <li data-thumbnail-path="content/media/thumbnails/2.jpg" data-url="content/media/images/2.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/3.jpg" data-url="content/media/images/3.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/4.jpg" data-url="content/media/images/4.jpg"> </li>
+                    <li data-thumbnail-path="content/media/thumbnails/5.jpg" data-url="content/media/images/5.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/6.jpg" data-url="content/media/images/6.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/7.jpg" data-url="content/media/images/7.jpg"> </li>
+                    <li data-thumbnail-path="content/media/thumbnails/8.jpg" data-url="content/media/images/8.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/9.jpg" data-url="content/media/images/9.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/10.jpg" data-url="content/media/images/10.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/11.jpg" data-url="content/media/images/11.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/12.jpg" data-url="content/media/images/12.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/13.jpg" data-url="content/media/images/13.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/14.jpg" data-url="content/media/images/14.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/15.jpg" data-url="content/media/images/15.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/16.jpg" data-url="content/media/images/16.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/17.jpg" data-url="content/media/images/17.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/18.jpg" data-url="content/media/images/18.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/19.jpg" data-url="content/media/images/19.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/20.jpg" data-url="content/media/images/20.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/21.jpg" data-url="content/media/images/21.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/22.jpg" data-url="content/media/images/22.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/23.jpg" data-url="content/media/images/23.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/24.jpg" data-url="content/media/images/24.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/25.jpg" data-url="content/media/images/25.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/26.jpg" data-url="content/media/images/26.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/27.jpg" data-url="content/media/images/27.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/28.jpg" data-url="content/media/images/28.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/29.jpg" data-url="content/media/images/29.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/30.jpg" data-url="content/media/images/30.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/31.jpg" data-url="content/media/images/31.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/32.jpg" data-url="content/media/images/32.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/33.jpg" data-url="content/media/images/33.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/34.jpg" data-url="content/media/images/34.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/35.jpg" data-url="content/media/images/35.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/36.jpg" data-url="content/media/images/36.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/37.jpg" data-url="content/media/images/37.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/38.jpg" data-url="content/media/images/38.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/39.jpg" data-url="content/media/images/39.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/40.jpg" data-url="content/media/images/40.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/41.jpg" data-url="content/media/images/41.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/42.jpg" data-url="content/media/images/42.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/43.jpg" data-url="content/media/images/43.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/44.jpg" data-url="content/media/images/44.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/45.jpg" data-url="content/media/images/45.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/46.jpg" data-url="content/media/images/46.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/47.jpg" data-url="content/media/images/47.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/48.jpg" data-url="content/media/images/48.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/49.jpg" data-url="content/media/images/49.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/50.jpg" data-url="content/media/images/50.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/51.jpg" data-url="content/media/images/51.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/52.jpg" data-url="content/media/images/52.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/53.jpg" data-url="content/media/images/53.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/54.jpg" data-url="content/media/images/54.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/55.jpg" data-url="content/media/images/55.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/56.jpg" data-url="content/media/images/56.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/57.jpg" data-url="content/media/images/57.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/58.jpg" data-url="content/media/images/58.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/59.jpg" data-url="content/media/images/59.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/60.jpg" data-url="content/media/images/60.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/61.jpg" data-url="content/media/images/61.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/62.jpg" data-url="content/media/images/62.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/63.jpg" data-url="content/media/images/63.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/64.jpg" data-url="content/media/images/64.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/65.jpg" data-url="content/media/images/65.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/66.jpg" data-url="content/media/images/66.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/67.jpg" data-url="content/media/images/67.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/68.jpg" data-url="content/media/images/68.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/69.jpg" data-url="content/media/images/69.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/70.jpg" data-url="content/media/images/70.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/71.jpg" data-url="content/media/images/71.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/72.jpg" data-url="content/media/images/72.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/73.jpg" data-url="content/media/images/73.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/74.jpg" data-url="content/media/images/74.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/75.jpg" data-url="content/media/images/75.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/76.jpg" data-url="content/media/images/76.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/77.jpg" data-url="content/media/images/77.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/78.jpg" data-url="content/media/images/78.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/79.jpg" data-url="content/media/images/79.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/80.jpg" data-url="content/media/images/80.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/81.jpg" data-url="content/media/images/81.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/82.jpg" data-url="content/media/images/82.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/83.jpg" data-url="content/media/images/83.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/84.jpg" data-url="content/media/images/84.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/85.jpg" data-url="content/media/images/85.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/86.jpg" data-url="content/media/images/86.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/87.jpg" data-url="content/media/images/87.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/88.jpg" data-url="content/media/images/88.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/89.jpg" data-url="content/media/images/89.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/90.jpg" data-url="content/media/images/90.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/91.jpg" data-url="content/media/images/91.jpg" ></li>
+                    <li data-thumbnail-path="content/media/thumbnails/92.jpg" data-url="content/media/images/92.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/93.jpg" data-url="content/media/images/93.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/94.jpg" data-url="content/media/images/94.jpg"> </li>
+                    <li data-thumbnail-path="content/media/thumbnails/95.jpg" data-url="content/media/images/95.jpg"></li>
+                    <!-- <li data-thumbnail-path="content/media/thumbnails/96.jpg" data-url="content/media/images/96.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/97.jpg" data-url="content/media/images/97.jpg"> </li>
+                    <li data-thumbnail-path="content/media/thumbnails/98.jpg" data-url="content/media/images/98.jpg"></li> -->
+                    <li data-thumbnail-path="content/media/thumbnails/99.jpg" data-url="content/media/images/99.jpg"></li>
+                    <li data-thumbnail-path="content/media/thumbnails/100.jpg" data-url="content/media/images/100.jpg"></li>
+                </ul>
+                
+            </div>
+
+        </div>
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Our advisor Area End <<<<<<<<<<<<<<<< -->
+
+    <!-- >>>>>>>>>>>>>>>> Message Now Area Start <<<<<<<<<<<<<<<< -->
+    <section class="message_now_area section_padding_100_70" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- Message Title -->
+                    <div class="message_title">
+                        <!-- Section Heading Start -->
+                        <div class="section_heading">
+                            <p>Drop a line</p>
+                            <h3>Message Me</h3>
+                        </div>
+                    </div>
+
+                    <div class="contact_from">
+                        <form action="mail.php" method="post" id="main_contact_form">
+                            <!-- Message Input Area Start -->
+                            <div class="contact_input_area">
+                                <div id="success_fail_info"></div>
+                                <div class="row">
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your E-mail" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Your Subject" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" name="number" id="number" placeholder="Your Number *" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Your Message *" required></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-xs-12">
+                                        <button type="submit" class="btn btn-default">Send Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Message Input Area End -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- >>>>>>>>>>>>>>>> Footer Area Start <<<<<<<<<<<<<<<< -->
+    <footer class="footer_area">
+        <!-- Bottom Footer Area Start -->
+        <div class="footer_bottom_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="social_links_area">
+                            <a href="https://www.artstation.com/wsatcher" target="_blank" data-toggle="tooltip" data-placement="top" title="Artstation"><img src="img/core-img/artstation_icon.webp" class="icon_small"></img></a>
+                            <a href="https://github.com/wsatchmo" target="_blank" data-toggle="tooltip" data-placement="top" title="Github"><img src="img/core-img/github_icon.webp" class="icon_small"></img></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="footer_bottom">
+                            <p>&#169; Will Satcher 2022</p>
+                        </div>
+                        <!-- Bottom Footer Copywrite Text Area End -->
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-<!--    
-                               __            __           
-                              |  \          |  \          
- ______ ____    ______    ____| $$  ______  | $$  _______ 
-|      \    \  /      \  /      $$ |      \ | $$ /       \
-| $$$$$$\$$$$\|  $$$$$$\|  $$$$$$$  \$$$$$$\| $$|  $$$$$$$
-| $$ | $$ | $$| $$  | $$| $$  | $$ /      $$| $$ \$$    \ 
-| $$ | $$ | $$| $$__/ $$| $$__| $$|  $$$$$$$| $$ _\$$$$$$\
-| $$ | $$ | $$ \$$    $$ \$$    $$ \$$    $$| $$|       $$
-\$$  \$$  \$$  \$$$$$$   \$$$$$$$  \$$$$$$$ \$$ \$$$$$$$ -->
-    <!-- MODALS -->
-    <!-- ABOUT -->
-    <div id="about-modal" class="modal animated fadeIn">
-        <div class="modal-background"></div>
-        <div class="card" id="modal-content" style="margin: 3%;">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-96x96">
-                            <img src="./assets/images/self-circular.webp" alt="Self-Portrait">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-8 sel" style="margin-top: 2.5vw;">
-                        Will Satcher
-                        </p>
-                        <p class="subtitle sel">Full Stack Developer / Illustrator & Graphic Designer </p>
-                    </div>
-                </div>
-                <div class="content sel" style="font-size: 15px;">
-                    Full stack web developer with a background in Graphic Design and a practiced knowledge of aesthetic principles. 
-                    Effective at producing creative solutions to complicated problems, and pulling from a rich knowledge of design to devise attractive interfaces and smooth experiences for users.
-                </div>
-            </div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <!-- PIXLA MODAL -->
-    <div id="pixla-modal" class="modal animated fadeIn">
-        <div class="modal-background"></div>
-        <div id="pixla-modal-inner" class="card project-modal">
-            <div class="card-image" >
-                <figure id="pixla-modal-figure" class="image is-4by3" >
-                <img id="pixla-modal-img" src="./assets/images/screenshots/pixla_screenshot.webp" style="object-fit: cover;" alt="Pixla Screenshot">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media" style="margin-bottom: 1rem;">
-                    <div class="media-left">
-                        <figure class="image is-64x64">
-                        <img src="./assets/images/pixlalogo.webp" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4" style="margin-top: 2.5vw;">Pixla</p>
-                        <p class="subtitle is-6">Visual-centric social media</p>
-                    </div>
-                </div>
-                <div class="content" style="font-size: 15px; line-height: 14px;">
-                    Visual social media site linked to an SQL database for image sharing & commenting. 
-                            Utilizes Node.js with Express-Handlebars for routing and templating, 
-                            Bulma.io CDN, Okta Authorization, and the Pexels image API. 
-                            Deployed to Heroku with the JawsDB plugin for SQL.
-                </div>
-            </div>
-            <footer class="card-footer">
-                <a href="https://pixla.herokuapp.com" class="card-footer-item">Visit Deployed Site</a>
-                <a href="https://github.com/wsatchmo/Pixla" class="card-footer-item">View Github Repo</a>
-            </footer>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <!-- WORDCLOUD MODAL -->
-    <div id="wordcloud-modal" class="modal animated fadeIn">
-        <div class="modal-background"></div>
-        <div id="wordcloud-modal-inner" class="card project-modal">
-            <div class="card-image" >
-                <figure id="wordcloud-modal-figure" class="image is-4by3" >
-                <img id="wordcloud-modal-img" src="./assets/images/screenshots/wordcloud_screenshot.webp" style="object-fit: cover;" alt="Worcloud Screenshot">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media" style="margin-bottom: 1rem;">
-                    <div class="media-left">
-                        <figure class="image is-64x64">
-                        <img src="./assets/images/cloud.webp" alt="Wordcloud Logo">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4" style="margin-top: 2.5vw;">Wordcloud</p>
-                        <p class="subtitle is-6">Cloud-based story writing</p>
-                    </div>
-                </div>
-                <div class="content" style="font-size: 15px; line-height: 14px;">
-                    Writing app with features meant to stir the imagination and help maintain flow.
-                            Word and image search conducted with BigHugeThesaurus and Pexels APIs. 
-                            Elements of Bootstrap and Materialize CDN. Linked to Firebase Real-Time 
-                            Database & Auth for automatic saving if logged in. Also makes use of Johann Burkard's Highlight plugin.
-                </div>
-            </div>
-            <footer class="card-footer">
-                <a href="https://wsatchmo.github.io/Wordcloud" class="card-footer-item">Visit Deployed Site</a>
-                <a href="https://github.com/wsatchmo/Wordcloud" class="card-footer-item">View Github Repo</a>
-            </footer>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <!-- BOOKTIONARY MODAL -->
-    <div id="booktionary-modal" class="modal animated fadeIn">
-        <div class="modal-background"></div>
-        <div id="booktionary-modal-inner" class="card project-modal">
-            <div class="card-image" >
-                <figure id="booktionary-modal-figure" class="image is-4by3" >
-                <img id="booktionary-modal-img" src="./assets/images/screenshots/booktionary_screenshot.webp" style="object-fit: cover;" alt="Booktionary Screenshot">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media" style="margin-bottom: 1rem;">
-                    <div class="media-left">
-                        <figure class="image is-64x64">
-                        <img src="./assets/images/booktionary_logo.webp" alt="Booktionary Logo">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4 is-3-mobile" style="margin-top: 2.5vw;">Booktionary</p>
-                        <p class="subtitle is-6">React book search & save</p>
-                    </div>
-                </div>
-                <div class="content" style="font-size: 15px; line-height: 14px;">
-                    Book searching and saving app, pulling from the Google Books API as a resource.
-                            Full-Stack MERN application utilizing React and React-Bootstrap components in conjunction with a MongoDB database.
-                            Uses Axios for React Router requests. Deployed to Heroku with the mLab plugin for MongoDB.
-                </div>
-            </div>
-            <footer class="card-footer">
-                <a href="https://gentle-forest-73354.herokuapp.com/" class="card-footer-item">Visit Deployed Site</a>
-                <a href="https://github.com/wsatchmo/Booktionary" class="card-footer-item">View Github Repo</a>
-            </footer>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-<!--                       
-      _____   ______         ______
-     |     \ /      \       / $$$$$$\
-     \$$$$$|  $$$$$$\      / $    \ $\
-       | $$| $$___\$$     / $      \ $\
-  __   | $$ \$$    \     | $       | $|
- |  \  | $$ _\$$$$$$\    | $       | $|
- | $$__| $$|  \__| $$    \ $      / $/
-  \$$    $$ \$$    $$     \ $..../ $/
-   \$$$$$$   \$$$$$$       \_$$$$$/
- -->
- <!-- <script type="text/javascript" src="./assets/js/sphere.js"></script> -->
-    <script type="text/javascript" src="./assets/js/animejs/lib/anime.min.js"></script>
-    <script type="text/javascript" src="./assets/js/pop.js"></script>
-    <script type="text/javascript" src="./assets/js/buttons.js"></script>
-    <script type="text/javascript" src="./assets/js/grid-gallery.js"></script>
+    <!-- >>>>>>>>>>>>>>>> Footer Area End <<<<<<<<<<<<<<<< -->
 
-    <script>
-        //Video Volume
-        var vid = document.getElementById("videobox");
-        vid.volume = 0.25;
-    </script>
+    <!-- >>>>>>>>>>>>>>>> All jQuery Plugins <<<<<<<<<<<<<<<< -->
 
-    <script>
-    //NAV ANIM
-        $("#collapse-button").on('click', function(e) {
-            e.preventDefault();
-            $(".navbar-burger").toggleClass("is-active");
-            $('#nav-collapsed').transition('slide down');
-        });
+    <!-- jQuery (necessary for all JavaScript plugins) -->
+    <script src="js/jquery-2.2.4.min.js"></script>
 
-        $('.ui.dropdown').dropdown();
-    </script>
-    <script>
-    //BUTTONS ANIMS
-        $(".artstation").on("mouseenter", function(e) {
-            $('.artstation').transition('pulse');
-        });
-        $(".github").on("mouseenter", function(e) {
-            $('.github').transition('pulse');
-        });
-        $(".artstation").on("click", function(e) {
-            $('.artstation').transition('jiggle');
-        });
-        $(".github").on("click", function(e) {
-            $('.github').transition('jiggle');
-        });
-        function logoHover(){
-            $('#logo-satchmo').transition('jiggle');
-        };
-        function pixlaHover(){
-            $('#pixla-img-logo').transition('bounce');
-            $('#pixla-img-pixla').transition('pulse');
-        };
-        function wordcloudHover(){
-            $('#wordcloud-img-logo').transition('jiggle');
-        };
-        function booktionaryHover(){
-            $('#booktionary-img-logo').transition('tada');
-            $('#booktionary-img-booktionary').transition('bounce');
-        };
-        function logoPop(){
-            $('#logo-satchmo').transition('tada');
-        };
-    </script>
-    <script type="text/javascript">
-    //DEV/DES ANIMS
-        $(".des-only").click(() => {
-            $("#github-btn").css("background-color", "#d3d3d3");
-            $("#artstation-btn").css("background-color", "#2f2f2f");
-            $(".imglabel, .biglabel-one, .biglabel-two").css("color", "darkgrey");
-            $(".wave.-one").css("background", "black");
-            $(".wave.-two").css("background", "white");
-            $(".wave.-three").css("background-color", "black");
-            $(".des-only").addClass("active");
-            $(".dev-only").removeClass("active");
-            $(".both").removeClass("active");
-            if ($("#des-column").hasClass("hidden")){
-                $("#des-column").transition('scale');
-            }
-            if ($(".project-button").hasClass("inverted")){
-                $(".project-button").removeClass("inverted");
-            }
-            // if (document.body.scrollTop === 0 && !$("#dev-column").hasClass("hidden")){
-            //     //We are at the top of navbar/screen; scroll to des-column if not in view
-            //     document.getElementById( 'scrollto' ).scrollIntoView();
-            // }
-            $("#dev-column").transition('scale')
-            console.log("scrolltop", document.body.scrollTop);
-        });
-        $(".dev-only").click(() => {
-            $("#github-btn").css("background-color", "#f5f5f5");
-            $("#artstation-btn").css("background-color", "#2f2f2f");
-            $(".imglabel, .biglabel-one, .biglabel-two").css("color", "white");
-            $(".wave.-one").css("background", "white");
-            $(".wave.-two").css("background", "black");
-            $(".wave.-three").css("background-color", "white");
-            $(".dev-only").addClass("active");
-            $(".des-only").removeClass("active");
-            $(".both").removeClass("active");
-            if ($("#dev-column").hasClass("hidden")){
-                $("#dev-column").transition('scale');
-            }
-            if (!$(".project-button").hasClass("inverted")){
-                $(".project-button").addClass("inverted");
-            }
-            $("#des-column").transition('scale');
-        })
-        $(".both").click(() => {
-            $("#github-btn").css("background-color", "#f5f5f5");
-            $("#artstation-btn").css("background-color", "black");
-            $(".imglabel, .biglabel-one, .biglabel-two").css("color", "white");
-            $(".wave.-one").css("background", "grey");
-            $(".wave.-two").css("background", "black");
-            $(".wave.-three").css("background-color", "white");
-            $(".both").addClass("active");
-            $(".dev-only").removeClass("active");
-            $(".des-only").removeClass("active");
-            if ($("#dev-column").hasClass("hidden")){
-                $("#dev-column").transition('scale');
-            }
-            if (!$(".project-button").hasClass("inverted")){
-                $(".project-button").addClass("inverted");
-            }
-            if ($("#des-column").hasClass("hidden")){
-                $("#des-column").transition('scale');
-            }
-        })
-    </script>
-    <!-- MODALS -->
-    <script>
-        $(".modal-open").click(function() {
-            var target = $(this).data("target");
-            console.log(target);
-            $("html").addClass("is-clipped");
-            $(target).addClass("is-active");
-        });
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
 
-        $(".modal-close").click(function() {
-            $("html").removeClass("is-clipped");
-            $(this).parent().removeClass("is-active");
-        });
+    <!-- Owl-carousel js -->
+    <script src="js/owl.carousel.min.js"></script>
 
-        $(".modal-background").click(function() {
-            $("html").removeClass("is-clipped");
-            $(this).parent().removeClass("is-active");
-        });
-    </script>
-    <!-- MODAL RESIZE -->
-    <script>
-        $(window).on('resize', function() {
-            if(($(window).width() > 700 && $(window).height() < 525) || ($(window).width() > 850 && $(window).height() < 625)
-                || ($(window).width() > 1200 && $(window).height() < 800) || ($(window).width() > 1500 && $(window).height() < 935) 
-                || ($(window).width() > 2000 && $(window).height() < 1024)) {
-                $('#pixla-modal-figure').removeClass('is-4by3');
-                $('#pixla-modal-figure').addClass('is-3by1');
-                $('#pixla-modal-img').attr('src', "./assets/images/screenshots/screenshot_pixla_long.webp");
-                
-                $('#wordcloud-modal-figure').removeClass('is-4by3');
-                $('#wordcloud-modal-figure').addClass('is-3by1');
-                $('#wordcloud-modal-img').attr('src', "./assets/images/screenshots/screenshot_wordcloud_long.webp");
-                
-                $('#booktionary-modal-figure').removeClass('is-4by3');
-                $('#booktionary-modal-figure').addClass('is-3by1');
-                $('#booktionary-modal-img').attr('src', "./assets/images/screenshots/screenshot_booktionary_long.webp");
-            }else{
-                $('#pixla-modal-figure').addClass('is-4by3');
-                $('#pixla-modal-figure').removeClass('is-3by1');
-                $('#pixla-modal-img').attr('src', "./assets/images/screenshots/pixla_screenshot.webp");
-                
-                $('#wordcloud-modal-figure').addClass('is-4by3');
-                $('#wordcloud-modal-figure').removeClass('is-3by1');
-                $('#wordcloud-modal-img').attr('src', "./assets/images/screenshots/wordcloud_screenshot.webp");
-                
-                $('#booktionary-modal-figure').addClass('is-4by3');
-                $('#booktionary-modal-figure').removeClass('is-3by1');
-                $('#booktionary-modal-img').attr('src', "./assets/images/screenshots/booktionary_screenshot.webp");
-            }
-        })
-    </script>
-    <!-- LOADING -->
-    <!-- COPYRIGHT YEAR -->
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
+    <!-- Ajax Contact js -->
+    <script src="js/ajax-contact.js"></script>
+
+    <!-- Meanmenu js -->
+    <script src="js/meanmenu.js"></script>
+
+    <!-- Onepage Nav js -->
+    <script src="js/jquery.nav.min.js"></script>
+
+    <!-- Magnific Popup js -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Back to top js -->
+    <script src="js/jquery.scrollUp.js"></script>
+
+    <!-- jQuery easing js -->
+    <script src="js/jquery.easing.1.3.js"></script>
+
+    <!-- WOW js -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- parallux js -->
+    <script src="js/jquery.stellar.min.js"></script>
+
+    <!-- Footer Reveal js -->
+    <script src="js/footer-reveal.js"></script>
+
+    <!-- YouTube Video Player js -->
+    <script src="js/YTPlayer.min.js"></script>
+
+    <!-- Active js -->
+    <script src="js/custom.js"></script>
 
 </body>
+
 </html>
-
-
-<!-- DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS @ 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=*!!;;;;;!*====@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=!;;;;;;;;;;!!**===$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=*;;:~--~::::;;;;!!**=$$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#=**!:-,..,--~~:;;;;::;!*==#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$*!;~,.    .,,--~~:;;;;;;!*=$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*;:~-.     ..,,,,--~:!!!!!:!**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$!::-.     .,..,,.,--~;!!!!:~!*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$*:--,..   .....,..,,,-:;!**!:-:*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#=;~~---,. .....,-,,,,-~~:;!**!:::$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$=*;::~-,...,,,,,,---,--~~:;!!*!*;;:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=*!;;:~-,,,,,--,,,,-~~~---~:;!**=*!;;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#=!!!!:--,,,,---,,,--~~~-~-~:;;!*==*!;*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$*!*!;:--,,,,--------~~--~~~~;!**==*!;:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$***!;:-,--,---~-----~~~~~~:~:!**===*;:!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$=*!;:~-----------~---~~~~~:::;**==$=*;;;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##$=;;:~~~~~-~~~---------~~::::;;***====!;!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-!!!*@@@@@@@@@@@@@@;~:::;::;:::;!!***=@@@@@##=;;;:::~~---~~----,,--~~:::;;!!***====*!!=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-::::::;!!***!;;;;:::~~~~~~~-~~:;!!***=@@@##$!!!!;;:::~~~~-~~--,-~~::;;;;!!****==$=*!!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-~:::::;;;;!!!;:::~~~---,,.. .,,~:;!!*=$#@##$***!;;;;:~~~-~~---~-~~::;;;;!!****=====*!!=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-=**!;:~~--~:~~---,..  .......,.,,-:!!*$#####$==*!!;;;~--~~--~~~::~:::;;;!!***======*!!*=@@@@@@@@@@@@@@@@@;;*;@@@@@!!!!;@
-@@===**!;:~-~-,,,..,---~---~-~,,,-~;!*=#####$=**!;:~-,,-~--~~::~:~~~:;!!!!**====$$==*!!=@@@@@@@@@@=$$=*!;~:;;;!;;!!!!!**
-@@@****==*!;::::::;;;;;:::;::::~::;;!!*$##$=*;;;;;:-----.,,-----~:::;!!!!***=======*!;;*#@@@@@@@;===***!;!;!!;;;;!!**==*
-@@@@==*=====**=************!!;;;;;;!!!*$##=*!:~~~-,....,-~--,-~~~~~~~:;;;!!!;!*==$==*!;;$@@@@@@==**;:-,--~~~:!****==**!!
-@@@@@@=======****!******====**!;!!!!!!*=##=;~~--,,,..,,,,,~~-------~~~:;!!!;!!!!!**==*!!*#@@@@==**!;:~~::!********!!!!!!
-@@@@@@@@@=*******!!!****==*===*!!!!!!!!=#$!!:;~,,,,,,,---,,-~~~--~:;;:::;;;;;:::;*==$=*!!$#@@*==*;:;;!*===$====*!!!;!!*@
-@@@@@@@@@@=******!;;!**===*=====*!!!!!!*=*!!!!;:~------~~---------~;!;~~~~~~~:;!**=$$$=*;=#@#$=*!!;!*=$$$$$$$=*!!!;!!=@@
-@@@@@@@@@@@***!***!;;;!*=========*!!!!!*****=****!!;:~-~~~-~~---~--:!;~:~~-~~:;!!*==$$$=!!#@@$*!!***$$$$$$$$*!!;;@@@@@@@
-@@@@@@@@@@@@**!!***!;:;!*==$======*!!!!!!!!*====$===*!::~:~:;:~~:~~;!;;~-~-~:::;!**=$$$=*!#@@$****=$$$$$$$==!;;;@@@@@@@@
-@@@@@@@@@@@@**!!!**!!;;;!!*=======*!!*!!!;;**==$$$$$$=*;:::~::~~:::!!;;~:~~::;;!***=$$$$=*$@#=====$$$$$$$==*:~@@@@@@@@@@
-@@@@@@@@@@@@@=**!!**!;!!!!!!***===*****!;::!!*==$$$##$=*!;::~~~~::;!!;;:;~::;!!**===$$$$==$#$===$$$$$$$$===;~,@@@@@@@@@@
-@@@@@@@@@@@@@@;=!;!**!!*********==*****!:~~:!*==$$$$$$$=*!;:~~~;;;!!;!;;!~;;!!**===$$$$$==$$$==$$$$$$=====!~,@@@@@@@@@@@
-@@@@@@@@@@@@@@@=*!!!!!!!**===$$===*!***;:~-~;!*=$$$=$$#$=*!;;:;!!!*;:;!!*;!!***==$$$$$====$$$$$$$$=======*:--@@@@@@@@@@@
-@@@@@@@@@@@@@@@@*=*!!!*!!!**==$$$=*!*=*;~-,-:;!*==$=*=$$$==**!***!!:~;!*****===$$$$$$====*=$$#$===***=*==;~-@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@*==*****!!!!*=$$=*!*=*;~--~~~;;!*=*;;*==$$====!!:~--:!**====$$####$$==*!**$$$==******=**~~@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@=$$=***!!!!*=$$==**=*;::-.--:;*!**;~:;!$$$$=**:~-,-:;!*=$$$###=$$$==$=!*;=$$$$$$==*=**:;@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@=$$$=***!;!=*=**===$=*;~-,,.,~;!!*!;!!===!**!!~-,.,~::;*###=$===$$=====*!!$$$=====*==!@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@$#$$=***!;;!;:;!*=$$=!:~-,---~;!!***==!:;!::::-,.,-~~:!$$$!;!*======!*!;;=$=====*=**$@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@$$$$$=**!!!!;;;!=$$$=*;-,.~---:!***!~~:;:::~~-..,,-:;*$#$=**====****!***=$$=====*==@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@$$$$$==***=**!!*$$$$=!:-,,,-~~::~~~:;;;;!;~-,..,,-:;*$$$$=====***!**=$*==*!***===$@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@$$$$$=**====**=$$$=*;~------,-~;;;;::;:~--,..,,-:;*=$=====*******=$=*==****====@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@#$$$$=*******=$$$$=!;::~~~-~:;!!:~~-~-~~-,,,,,-:!**===*=******====*===**=====$@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@=$$$==*****==$$$$*!;:~:::;!*!:-,-,-~~~-,.,,--:!***==*******====*=$$======$$@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$========$$$$=!;:::;;!**!~-,,,-~~~-,,,---:!**!*==******===**$$$=====$$@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$$$$$==$$$$=!;;;:;!*==*:~~,,,-~~------~;***!!*====***==*=$$$$====$$@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###$$$$$$=!;;;;!*====!::~-,----,----~;***!!*========*=$$$$$$$$#@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$$$$$=!;;;!!***===!;;:-----,,---:!***!**=======**$##$$###@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##$$$$=*;;;!***!!*===*;:~----,--~:!******=======**#$$#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##$$===*;;;!*!;;!!*=$$=!:~~----~~;!=*****=$==$==*!$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##$===*!;;!*!:::;;!=$$=*;~~---~~:;*=*!!=$$$==$$*!!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##$==**!;;!;:~~~~:!*=$$*!:~---~~:;*=*;=$$$$==$=***@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$==**!;!!:~~~-~~:!=$$=*;:~~~~~:!==;*$$$$$====**=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##$=*!!;*!:--~:;;;!**$=*!::~~~:;!=!;$$$$=======!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$=**!!*;::!=====***!==*;:~~::;**!!===========*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$=*!;*!!*====!;========!;:~:;!**!*============@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$=*!!*!*=$$==**#=;*=*==*!:::;*=**==$$$=======$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@==*!!**=$####$##=;=*!**=*;;;!=*!*====$$====**#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$=*!!**==$#@$*$#=*$*!**==!!*=*!!**=$$##$==**=#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$*!!*****=$*!=$!*#*=$====*==***=$*#=$#$=*!!=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$=*!****!!*!!=*:*#$==$======$=*=$*$=$$$=**!$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$=******!;;!*!;*#$;*$!!=**=$=*==*$$$$=**!!;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$==****=!;::;;!!=*~!=;!=*!*=*!===$$===*!;:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$==***=*!:~~:;!!!;**;!=**===*$$$==*==*;:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$==*****!:~~:~:;!!*!****=$$$===*=*=*!;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@==****!!;::~~:;:;;;!**=======**=$*;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$=******!;:~:~~:-~;!!***======$*!:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$==!;!*=!;;;::;::;;!!**=====#=!;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#$=*!!!*==*!!!!;!!!!*======##!;:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$**!;;*===*=**===*====*=##$*;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$*!!;;;!**=$$$$$$$===$$##=***@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@==**!;::~;;*==$$$$$$####***@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@===*;:~~~~;**=$$$####$$*!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$==*!!::~::!**=$$##$$$=*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$==*!:;:;:;!*=$$#$$=*;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$$=!*;;!!!*=$$$#$==!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$$==**!*==$$$$$$=*:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@$$$==*!=$$$$$$$$*;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@####===$$$$$$$$=!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@####$####$$#$*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#########$@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@ DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS DRESSED AS GOBLINS -->
